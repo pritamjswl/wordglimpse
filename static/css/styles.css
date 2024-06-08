@@ -4,13 +4,27 @@
     display:none;
 }
 
+header {
+    z-index: 99;
+}
+
 /* Small screen styling */
 @media screen and (max-width:768px) {
-    
+    #searchBox {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+    #searchBox > form {
+        padding: 9px;
+    }
 }
 
 @media screen and (min-width:768px) {
-    form.sm-hidden {
+    .sm-hidden {
         display:inline-block;
     }
     .md-hidden {

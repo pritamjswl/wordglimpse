@@ -14,18 +14,19 @@
 </head>
 <body class="bg-body-secondary">
     <!-- HEADER-->
-    <header class="container-fluid navbar bg-body">
+    <header class="container-fluid navbar bg-body fixed-top" style="padding-left:15px;padding-right:5px;">
         <a href="/" class="navbar-brand">Wordglimpse</a>
 
         <div class="btn-group">
             <!-- Serch Box -->
-            <div id="searchBox" class="sm-hidden">
-                <form action="/search" method="get">
-                    <input type="search" name="q" placeholder="Search.." autofocus>
-                    <button type="submit"><i class="fa-solid fa-search"></i></button>
+            <div id="searchBox" class="sm-hidden bg-body-secondary">
+                <form action="/search" method="get" class="d-flex bg-body">
+                    <button type="button" class="btn md-hidden"><i class="fa-solid fa-arrow-left-long" onclick="toggleSearch()"></i></button>
+                    <input class="form-control" type="search" name="q" placeholder="Search.." autofocus>
+                    <button type="submit" class="btn"><i class="fa-solid fa-search"></i></button>
                 </form>
             </div>
-            <button type="button" class="btn md-hidden"><i class="fa-solid fa-search"></i></button>
+            <button type="button" class="btn md-hidden" onclick="toggleSearch()"><i class="fa-solid fa-search"></i></button>
 
             <div class="btn-group">
                 <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,6 +41,7 @@
             </div>
         </div>
     </header>
+    
     
     <!-- MAIN TABS-->
 
