@@ -1,20 +1,27 @@
-button.active {
-    border: none;
+/* Fixing and Resizing */
+.sm-hidden {
+    display: none;
 }
 
-button.active > i {
-    color: var(--bs-primary);
+/* ======= HEADER ======== */
+.header {
+    width: 100%;
+    padding-left:15px;
+    padding-right:5px;
+    z-index: 99;
 }
 
-.btn-circle {
-    border: 1px solid;
-    border-radius: 100%;
-    padding: 10px;
-    margin: 5px;
+/* ======= MAIN ======== */
+main {
+    margin-top: 50px;
+    padding: 20px;
 }
+
+/* ======= TAB Buttons ======== */
 
 /* Bottom Navigation */
 .bottom-nav {
+    z-index: 99;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -23,12 +30,12 @@ button.active > i {
     justify-content: space-evenly;
 }
 
-.sm-hidden {
-    display:none;
+button.active, button:active, button:hover {
+    border: none;
 }
 
-header, nav {
-    z-index: 99;
+button.active > i {
+    color: var(--bs-primary);
 }
 
 .bottom-nav > button {
@@ -42,7 +49,7 @@ header, nav {
     font-size: 12px;
 }
 
-/* Small screen styling */
+/* ====== Small screen styling ====== */
 @media screen and (max-width:768px) {
     #searchBox {
         position:fixed;
@@ -59,27 +66,34 @@ header, nav {
     }
 }
 
-/* DESKTOP LOOK */
+/* ==== DESKTOP LOOK ===== */
 @media screen and (min-width:768px) {
     
     /* Bottom Navigation */
     .bottom-nav {
         top: 60px;
         width: 25%;
+        flex-direction:column;
+        justify-content: flex-start;
     }
 
     .bottom-nav > button {
+        display: inline-block;
         width: 100%;
-        flex-direction: row;
+        height: 60px;
         align-items:flex-start;
-        justify-content: baseline;
     }
-    
+
+    .bottom-nav > button span {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
     .sm-hidden {
         display:inline-block;
     }
 
     .md-hidden {
-        display:none;
+        display: none;
     }
 }
