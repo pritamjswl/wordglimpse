@@ -1,11 +1,45 @@
+button.active {
+    border: none;
+}
 
+button.active > i {
+    color: var(--bs-primary);
+}
+
+.btn-circle {
+    border: 1px solid;
+    border-radius: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .sm-hidden {
     display:none;
 }
 
-header {
+header, nav {
     z-index: 99;
+}
+
+.bottom-nav > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-nav > button span {
+    font-size: 12px;
 }
 
 /* Small screen styling */
@@ -14,19 +48,37 @@ header {
         position:fixed;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
         height: 100%;
-        z-index: 999;
+        z-index: 99999;
     }
     #searchBox > form {
         padding: 9px;
     }
 }
 
+/* DESKTOP LOOK */
 @media screen and (min-width:768px) {
+    
+    /* Bottom Navigation */
+    .bottom-nav {
+        top: 60px;
+        width: 25%;
+    }
+
+    .bottom-nav > button {
+        width: 100%;
+        flex-direction: row;
+        align-items:flex-start;
+        justify-content: baseline;
+    }
+    
     .sm-hidden {
         display:inline-block;
     }
+
     .md-hidden {
         display:none;
     }

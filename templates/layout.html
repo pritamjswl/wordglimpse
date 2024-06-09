@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +12,17 @@
     <script src="/static/js/main.js"></script>
     {% block head %}{% endblock %}
 </head>
-<body class="bg-body-secondary">
+<body class="bg-body-secondary" data-bs-theme="light">
     <!-- HEADER-->
     <header class="container-fluid navbar bg-body fixed-top" style="padding-left:15px;padding-right:5px;">
         <a href="/" class="navbar-brand">Wordglimpse</a>
 
         <div class="btn-group">
             <!-- Serch Box -->
-            <div id="searchBox" class="sm-hidden bg-body-secondary">
+            <div id="searchBox" class="sm-hidden bg-body-tertiary">
                 <form action="/search" method="get" class="d-flex bg-body">
                     <button type="button" class="btn md-hidden"><i class="fa-solid fa-arrow-left-long" onclick="toggleSearch()"></i></button>
-                    <input class="form-control" type="search" name="q" placeholder="Search.." autofocus>
+                    <input class="form-control" type="search" name="q" placeholder="Search.." autocomplete="off" autofocus>
                     <button type="submit" class="btn"><i class="fa-solid fa-search"></i></button>
                 </form>
             </div>
@@ -34,17 +34,64 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end p-3">
                     <div class="form-check form-switch form-check-reverse">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="themeToggler">
+                        <label class="form-check-label" for="themeToggler">Dark Mode</label>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     
-    
     <!-- MAIN TABS-->
+    <main class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <h1>Home</h1>
+            <ul>
+                <li>Hom1</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <h1>Home</h1>
+            <ul>
+                <li>Home</li>
+                <li>Hom2</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+            <h1>Home</h1>
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Hom3</li>
+                <li>Home</li>
+            </ul>
+        </div>
+       
+    </main>
 
     <!--TAVLINKS-->
+    
+    <nav class="bottom-nav bg-body nav nav-tabs" id="nav-tab" role="tablist">
+
+        <button class="btn active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-newspaper"></i>
+            <span>Feed</span>
+        </button>
+
+        <button class="btn" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-layer-group"></i><span>Browse</span></button>
+
+        <button class="btn" type="button"><i class="fa-solid fa-pen-nib btn-circle"></i></button>
+
+        <button class="btn" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
+
+        <button class="btn" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fa-solid fa-user"></i><span>Account</span></button>
+    </nav>
+    
+      
 </body>
 </html>
