@@ -1,10 +1,32 @@
 /* Fixing and Resizing */
+
+.btn {
+    border:none;
+}
+
 .sm-hidden {
     display: none;
 }
 
+.height-500 {
+    height: 70vh!important;
+}
+
+.offcanvas {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 /* ======= HEADER ======== */
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding-left:15px;
     padding-right:5px;
@@ -13,8 +35,15 @@
 
 /* ======= MAIN ======== */
 main {
-    margin-top: 50px;
-    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Post Section */
+.btn-post {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
 }
 
 /* ======= TAB Buttons ======== */
@@ -28,14 +57,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-}
-
-button.active, button:active, button:hover {
-    border: none;
-}
-
-button.active > i {
-    color: var(--bs-primary);
+    padding: 5px 0;
 }
 
 .bottom-nav > button {
@@ -48,6 +70,21 @@ button.active > i {
 .bottom-nav > button span {
     font-size: 12px;
 }
+
+.bottom-nav > button.active > i {
+    color: var(--bs-primary);
+}
+
+/* Write button: to add new post (pen icon) */
+.btn-write {
+    border: 1px solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
 
 /* ====== Small screen styling ====== */
 @media screen and (max-width:768px) {
@@ -68,6 +105,12 @@ button.active > i {
 
 /* ==== DESKTOP LOOK ===== */
 @media screen and (min-width:768px) {
+
+    /* Main */
+    main {
+        margin-left: 25%;
+    }
+
     
     /* Bottom Navigation */
     .bottom-nav {
@@ -96,4 +139,16 @@ button.active > i {
     .md-hidden {
         display: none;
     }
+
+    .btn-write {
+        border: none;
+        border-radius: 0;
+        padding: 10px;
+        background-color: var(--bs-primary);
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+    }
+
+    
 }

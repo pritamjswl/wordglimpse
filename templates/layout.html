@@ -14,7 +14,7 @@
 </head>
 <body class="bg-body-secondary" data-bs-theme="light">
     <!-- HEADER-->
-    <header class="header navbar bg-body fixed-top">
+    <header class="header bg-body">
         <a href="/" class="navbar-brand">Wordglimpse</a>
 
         <div class="btn-group">
@@ -28,7 +28,7 @@
             </div>
             <button type="button" class="btn md-hidden" onclick="toggleSearch()"><i class="fa-solid fa-search"></i></button>
 
-            <div class="btn-group">
+            <div>
                 <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
@@ -62,14 +62,44 @@
         </div>
     </main>
 
+
+    <!-- ===== Create new post ===== -->
+    <div class="offcanvas offcanvas-bottom height-500" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <form action="/upload" method="post">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Create Post</h5>
+                <button type="submit" class="btn bg-primary btn-post">Post</button>
+            </div>
+            <div class="offcanvas-body small">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload An Image</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Title" name="title">
+                </div>
+
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Add Tags with space" name="tags">
+                </div>
+
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
     <!--TAB Buttons-->
-    <nav class="bottom-nav bg-body nav-tab" id="nav-tab" role="tablist">
+    <nav class="bottom-nav bg-body" role="tablist">
 
         <button class="btn active" id="nav-feed-tab" data-bs-toggle="tab" data-bs-target="#nav-feed" type="button" role="tab" aria-controls="nav-feed" aria-selected="true"><i class="fa-solid fa-newspaper"></i><span>Feed</span></button>
 
         <button class="btn" id="nav-browse-tab" data-bs-toggle="tab" data-bs-target="#nav-browse" type="button" role="tab" aria-controls="nav-browse" aria-selected="false"><i class="fa-solid fa-layer-group"></i><span>Browse</span></button>
 
-        <button class="btn md-hidden" type="button"><i class="md-hidden fa-solid fa-pen-nib"></i></button>
+        <button class="btn btn-write" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class=" fa-solid fa-pen-nib"></i></button>
 
         <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false"><i class="fa-solid fa-bookmark"></i><span> Saved</span></button>
 
