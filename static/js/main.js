@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', newTheme);
   });
   
+
 });
 
 function toggleSearch() {
     document.getElementById("searchBox").classList.toggle("sm-hidden");
+    // Focus search
+    document.getElementById("searchInput").focus();
 }
