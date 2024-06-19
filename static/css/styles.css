@@ -17,6 +17,7 @@
     border-top-right-radius: 20px;
 }
 
+
 /* ======= HEADER ======== */
 .header {
     position: fixed;
@@ -37,6 +38,24 @@
 main {
     margin-top: 60px;
 }
+
+.tab-pane {
+    position: fixed;
+    top: 57px;
+    bottom: 57px;
+    left: 0;
+    right: 0;
+}
+
+/* Cards */
+.card-container {
+    height: 100%;
+}
+.card {
+    border-radius: 0;
+    height: 100%;
+}
+
 
 /* Post Section */
 .btn-post {

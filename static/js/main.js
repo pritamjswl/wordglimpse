@@ -20,3 +20,4 @@ function toggleSearch() {
     // Focus search
     document.getElementById("searchInput").focus();
 }
+
