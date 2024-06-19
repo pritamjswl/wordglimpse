@@ -51,9 +51,12 @@ main {
 .swiper-container {
     height: 100%;
 }
-.swiper-slide {
-    border-radius: 0;
+.swiper-wrapper {
     height: 100%;
+}
+
+.card {
+    border-radius: 0;
 }
 .card > img {
     height: 150px;
@@ -161,7 +164,7 @@ main {
 @media screen and (min-width:768px) {
 
     /* Main */
-    main {
+    main, .swiper-container {
         margin-left: 25%;
     }
 
@@ -175,10 +178,12 @@ main {
     }
 
     .bottom-nav > button {
-        display: inline-block;
         width: 100%;
         height: 60px;
-        align-items:flex-start;
+        text-align: left;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .bottom-nav > button span {
