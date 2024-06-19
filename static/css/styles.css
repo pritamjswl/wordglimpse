@@ -48,10 +48,10 @@ main {
 }
 
 /* Cards */
-.card-container {
+.swiper-container {
     height: 100%;
 }
-.card {
+.swiper-slide {
     border-radius: 0;
     height: 100%;
 }
