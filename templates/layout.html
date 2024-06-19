@@ -59,7 +59,7 @@
                                     <span class="date">19 June 2024</span>
                                 </div>
                             </div>
-                            <button class="btn"><i class="fa-regular fa-bookmark"></i></button>
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#readListModal"><i class="fa-regular fa-bookmark"></i></button>
                         </div>
                         <div class="card-body">
                             <p class="card-text">
@@ -79,7 +79,7 @@
                                     <span class="date">19 June 2024</span>
                                 </div>
                             </div>
-                            <button class="btn"><i class="fa-regular fa-bookmark"></i></button>
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#readListModal"><i class="fa-regular fa-bookmark"></i></button>
                         </div>
                         <div class="card-body">
                             <p class="card-text">
@@ -134,6 +134,29 @@
             </div>
         </form>
 
+    </div>
+
+    <!-- Add to list option -->
+    <div class="modal" id="readListModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add to a list</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="/add-to-playlist" method="post" id="playlistForm">
+                <div class="list-checkbox">
+                    <label for="readinglist">Reading List</label>
+                    <input class="form-check-input" type="checkbox" id="readinglist" name="readinglist" value="readinglist">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" form="playlistForm">Done</button>
+            </div>
+          </div>
+        </div>
     </div>
 
     <!--TAB Buttons-->

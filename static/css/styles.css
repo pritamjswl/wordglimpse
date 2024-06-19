@@ -15,6 +15,7 @@
 .offcanvas {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    transition: all 0.3s;
 }
 
 
@@ -94,7 +95,6 @@ main {
     text-justify: inter-word;
 }
 
-
 /* Post Section */
 .btn-post {
     position: absolute;
@@ -103,8 +103,14 @@ main {
     color: #fff;
 }
 
-/* ======= TAB Buttons ======== */
+/* List chekbox for adding cards to a list */
+.list-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+/* ======= TAB Buttons ======== */
 /* Bottom Navigation */
 .bottom-nav {
     z-index: 9;
@@ -142,7 +148,6 @@ main {
     padding: 0 15px;
 }
 
-
 /* ====== Small screen styling ====== */
 @media screen and (max-width:768px) {
     #searchBox {
@@ -162,13 +167,11 @@ main {
 
 /* ==== DESKTOP LOOK ===== */
 @media screen and (min-width:768px) {
-
     /* Main */
     main, .swiper-container {
         margin-left: 25%;
     }
 
-    
     /* Bottom Navigation */
     .bottom-nav {
         top: 60px;
@@ -208,6 +211,4 @@ main {
         position: absolute;
         bottom: 0;
     }
-
-    
 }
