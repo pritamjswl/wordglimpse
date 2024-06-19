@@ -55,6 +55,27 @@ main {
     border-radius: 0;
     height: 100%;
 }
+.card > img {
+    height: 150px;
+    border-radius: 0;
+    object-fit: cover;
+}
+.card-info {
+    padding: 10px 14px;
+}
+.card-info .avatar-img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 
 /* Post Section */
