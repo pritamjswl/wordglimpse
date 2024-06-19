@@ -60,10 +60,24 @@ main {
     border-radius: 0;
     object-fit: cover;
 }
-.card-info {
-    padding: 10px 14px;
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
 }
-.card-info .avatar-img {
+
+.card-header-left {
+    display: flex;
+    align-items: center;
+}
+.card-info {
+    display: inline-flex;
+    flex-direction: column;
+}
+.card-info .date {
+    font-size: 70%;
+}
+.card-header .avatar-img {
     margin-right: 10px;
     width: 30px;
     height: 30px;
