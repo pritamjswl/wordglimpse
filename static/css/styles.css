@@ -110,6 +110,23 @@ main {
     justify-content: space-between;
 }
 
+/* ====== SAVED section ====== */
+.saved-folder {
+    text-decoration: none;
+    color: var(--bs-text);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+}
+
+.saved-folder i {display: inline-block; padding: 20px;}
+.saved-folder span {font-size: 110%;}
+
 /* ======= TAB Buttons ======== */
 /* Bottom Navigation */
 .bottom-nav {

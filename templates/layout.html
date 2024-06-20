@@ -94,18 +94,43 @@
         </div>
          <!-- ============ Browse Section starts here ============= -->
         <div class="tab-pane fade" id="nav-browse" role="tabpanel" aria-labelledby="nav-browse-tab" tabindex="0">
-            <h1>Browse Section</h1>
+            <h1>Recent Post will appear here.</h1>
         </div>
          <!-- ============ Saved Section starts here ============= -->
-        <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
-            <h1>Saved Section</h1>
+        <div class="tab-pane fade p-3" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
+            <div class="dropdown mb-3 d-flex" style="flex-direction: row-reverse;">
+                <a class="btn btn-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-plus"></i> Create List
+                </a>
+                
+                <div class="dropdown-menu p-3">
+                    <form action="create-playlist" method="post">
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="playlistname" placeholder="Playlist Name" autofocus>
+                        </div>
+                        <div class="d-flex mb-3" style="justify-content: space-between;">
+                            <label for="public">Public Playlist</label>
+                            <input type="checkbox" class="form-check-input" value="public" name="public" id="public">
+                        </div>
+                        <div class="d-flex" style="flex-direction: row-reverse;">
+                            <button type="submit" class="btn btn-primary">Create New</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <a href="/saved" class="saved-folder bg-body">
+                    <i class="fa-solid fa-clock-rotate-left bg-body-tertiary"></i>
+                    <span>Saved for later</span>
+                </a>
+            </div>
         </div>
          <!-- ============ Account Section starts here ============= -->
         <div class="tab-pane fade" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab" tabindex="0">
             <h1>Account Section</h1>
         </div>
     </main>
-
 
     <!-- ===== Create new post ===== -->
     <div class="offcanvas offcanvas-bottom height-500" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
@@ -125,7 +150,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <input class="form-control" type="text" placeholder="Add Tags with space" name="tags">
+                    <input class="form-control" type="text" placeholder="Enter your topic. E.g, News, Story, Health, etc" name="topic">
                 </div>
 
                 <div class="mb-3">
@@ -164,7 +189,7 @@
 
         <button class="btn active" id="nav-feed-tab" data-bs-toggle="tab" data-bs-target="#nav-feed" type="button" role="tab" aria-controls="nav-feed" aria-selected="true"><i class="fa-solid fa-newspaper"></i><span>Feed</span></button>
 
-        <button class="btn" id="nav-browse-tab" data-bs-toggle="tab" data-bs-target="#nav-browse" type="button" role="tab" aria-controls="nav-browse" aria-selected="false"><i class="fa-solid fa-layer-group"></i><span>Browse</span></button>
+        <button class="btn" id="nav-browse-tab" data-bs-toggle="tab" data-bs-target="#nav-browse" type="button" role="tab" aria-controls="nav-browse" aria-selected="false"><i class="fa-solid fa-clock"></i><span>Recent</span></button>
 
         <button class="btn btn-write" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class=" fa-solid fa-pen-nib"></i></button>
 
