@@ -124,8 +124,9 @@ main {
     border-radius: 5px;
 }
 
-.saved-folder i {display: inline-block; padding: 20px;}
-.saved-folder span {font-size: 110%;}
+.saved-folder i {display: inline-block; padding: 10px; font-size: 25px;}
+.saved-folder span{font-size: 110%; display: flex;flex-direction: column; justify-content: flex-start;}
+.saved-folder span span {font-size: 80%;}
 
 .account-link {
     padding: 12px 20px;
