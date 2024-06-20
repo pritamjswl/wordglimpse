@@ -111,7 +111,7 @@ main {
 }
 
 /* ====== SAVED section ====== */
-.saved-folder {
+.saved-folder, .account-link {
     text-decoration: none;
     color: var(--bs-text);
     display: flex;
@@ -124,8 +124,9 @@ main {
     border-radius: 5px;
 }
 
-.saved-folder i {display: inline-block; padding: 20px;}
-.saved-folder span {font-size: 110%;}
+.saved-folder i, .account-link i {display: inline-block; padding: 20px;}
+.saved-folder span, .account-link span {font-size: 110%;}
+
 
 /* ======= TAB Buttons ======== */
 /* Bottom Navigation */
