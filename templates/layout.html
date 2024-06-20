@@ -16,7 +16,6 @@
     <!-- HEADER-->
     <header class="header bg-body">
         <a href="/" class="navbar-brand">Wordglimpse</a>
-
         <div class="btn-group">
             <!-- Serch Box -->
             <div id="searchBox" class="sm-hidden bg-body-tertiary">
@@ -27,7 +26,6 @@
                 </form>
             </div>
             <button type="button" class="btn md-hidden" onclick="toggleSearch()"><i class="fa-solid fa-search"></i></button>
-
             <div>
                 <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -99,10 +97,7 @@
          <!-- ============ Saved Section starts here ============= -->
         <div class="tab-pane fade p-3" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
             <div class="dropdown mb-3 d-flex" style="flex-direction: row-reverse;">
-                <a class="btn btn-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-plus"></i> Create List
-                </a>
-                
+                <a class="btn btn-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create List</a>
                 <div class="dropdown-menu p-3">
                     <form action="create-playlist" method="post">
                         <div class="mb-3">
@@ -127,8 +122,29 @@
             </div>
         </div>
          <!-- ============ Account Section starts here ============= -->
-        <div class="tab-pane fade" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab" tabindex="0">
-            <h1>Account Section</h1>
+        <div class="tab-pane fade p-2" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab" tabindex="0">
+            <div class="p-2 bg-body">
+                <a href="/profile" class="account-link">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>Your Profile</span>
+                </a>
+                <a href="/posts" class="account-link">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Posts</span>
+                </a>
+                <a href="/following" class="account-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Followings</span>
+                </a>
+                <a href="/account" class="account-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Account</span>
+                </a>
+                <a href="/logout" class="account-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
         </div>
     </main>
 
@@ -195,7 +211,7 @@
 
         <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
 
-        <button class="btn" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="false"><i class="fa-solid fa-user"></i><span>Account</span></button>
+        <button class="btn" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="false"><i class="fa-solid fa-circle-user"></i><span>Account</span></button>
 
     </nav>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
