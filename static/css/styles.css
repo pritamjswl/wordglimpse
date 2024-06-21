@@ -29,17 +29,22 @@
     justify-content: space-evenly;
     padding: 5px 0;
 }
-
 .bottom-nav > .btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .bottom-nav > .btn span {font-size: 12px;}
 .bottom-nav > .btn.active > i {color: var(--bs-primary);}
-
+.btn-write {
+    border: 1px solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
 /* ===== Small screen styling ===== */
 @media screen and (max-width:768px) {
     #searchBox {
@@ -77,5 +82,13 @@
     .bottom-nav > .btn span {
         margin-left: 15px;
         font-size: 16px;
+    }
+    .btn-write {
+        position: absolute;
+        bottom: 0px;
+        border:none;
+        border-radius: 0;
+        background-color: var(--bs-primary);
+        color: #fff;
     }
 }
