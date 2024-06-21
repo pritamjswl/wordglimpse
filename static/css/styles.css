@@ -18,6 +18,15 @@
     z-index: 99;
 }
 
+/* ===== MAIN ===== */
+main {
+    position: fixed;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+}
+
 /* ===== BOTTOM NAV LINKS ===== */
 .bottom-nav {
     z-index: 9;
@@ -64,6 +73,12 @@
 @media screen and (min-width:768px) {
     .sm-hidden {display:inline-block;}
     .md-hidden {display: none;}
+    /* Main */
+    main {
+        left: calc(25% + 5px);
+        right: 5px;
+        bottom: 5px;
+    }
     /* Bottom Navigation */
     .bottom-nav {
         top: 60px;

@@ -44,9 +44,13 @@
             </div>
         </div>
     </header>
+    <!-- MAIN -->
+    <main class="bg-body-tertiary">
+        {% block main %}
+        {% endblock %}
+    </main>
 
     <!-- NAV TABS -->
-    <!--TAB Buttons-->
     <nav class="bottom-nav bg-body">
         <a href="/" class="btn active" type="button"><i class="fa-solid fa-home"></i><span>Home</span></a>
         <a href="/recent" class="btn" type="button"><i class="fa-solid fa-clock"></i><span>Recent</span></a>
