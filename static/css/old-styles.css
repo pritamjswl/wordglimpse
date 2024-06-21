@@ -1,0 +1,236 @@
+/* Fixing and Resizing */
+
+.btn {
+    border:none;
+}
+
+.sm-hidden {
+    display: none;
+}
+
+.height-500 {
+    height: 70vh!important;
+}
+
+.offcanvas {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.3s;
+}
+
+
+/* ======= HEADER ======== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left:15px;
+    padding-right:5px;
+    z-index: 99;
+}
+
+/* ======= MAIN ======== */
+main {
+    margin-top: 60px;
+}
+
+.tab-pane {
+    position: fixed;
+    top: 57px;
+    bottom: 57px;
+    left: 0;
+    right: 0;
+}
+
+/* Cards */
+.swiper-container {
+    height: 100%;
+}
+.swiper-wrapper {
+    height: 100%;
+}
+
+.card {
+    border-radius: 0;
+}
+.card > img {
+    height: 150px;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header-left {
+    display: flex;
+    align-items: center;
+}
+.card-info {
+    display: inline-flex;
+    flex-direction: column;
+}
+.card-info .date {
+    font-size: 70%;
+}
+.card-header .avatar-img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Post Section */
+.btn-post {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+/* List chekbox for adding cards to a list */
+.list-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ====== SAVED section ====== */
+.saved-folder, .account-link {
+    text-decoration: none;
+    color: var(--bs-text);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+}
+
+.saved-folder i {display: inline-block; padding: 10px; font-size: 25px;}
+.saved-folder span{font-size: 110%; display: flex;flex-direction: column; justify-content: flex-start;}
+.saved-folder span span {font-size: 80%;}
+
+.account-link {
+    padding: 12px 20px;
+}
+
+/* ======= TAB Buttons ======== */
+/* Bottom Navigation */
+.bottom-nav {
+    z-index: 9;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 0;
+}
+
+.bottom-nav > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-nav > button span {
+    font-size: 12px;
+}
+
+.bottom-nav > button.active > i {
+    color: var(--bs-primary);
+}
+
+/* Write button: to add new post (pen icon) */
+.btn-write {
+    border: 1px solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+/* ====== Small screen styling ====== */
+@media screen and (max-width:768px) {
+    #searchBox {
+        position:fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+    }
+    #searchBox > form {
+        padding: 9px;
+    }
+}
+
+/* ==== DESKTOP LOOK ===== */
+@media screen and (min-width:768px) {
+    /* Main */
+    main, .swiper-container {
+        margin-left: 25%;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+        top: 60px;
+        width: 25%;
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+
+    .bottom-nav > button {
+        width: 100%;
+        height: 60px;
+        text-align: left;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .bottom-nav > button span {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .sm-hidden {
+        display:inline-block;
+    }
+
+    .md-hidden {
+        display: none;
+    }
+
+    .btn-write {
+        border: none;
+        border-radius: 0;
+        padding: 10px;
+        background-color: var(--bs-primary);
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+    }
+}
