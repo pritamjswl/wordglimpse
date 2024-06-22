@@ -25,7 +25,7 @@
 }
 
 /* ===== MAIN ===== */
-.tab-pane {
+.tab-content {
     position: fixed;
     top: 60px;
     bottom: 65px;
@@ -139,11 +139,17 @@
 }
 
 /* ===== CARD ===== */
+
 .swiper-container,
 .swiper-wrapper,
 .swiper-slide{
   width: 100%;
   height: 100%;
+}
+.tab-pane {
+    width: 100%;
+    height: 100%;
+    
 }
 .card {
     border-radius: 0;
@@ -203,7 +209,7 @@
     .sm-hidden {display:inline-block;}
     .md-hidden {display: none;}
     /* Main */
-    .tab-pane {
+    .tab-content {
         left: calc(25% + 5px);
         right: 5px;
         bottom: 5px;
