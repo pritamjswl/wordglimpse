@@ -53,55 +53,59 @@
           </div>
     </main>
 
-    <!--SIDENAV-->
-    <aside class="p-2 bg-body" id="aside">
-      <div class="d-flex mb-3" style="flex-direction: row-reverse;">
-        <button type="button" class="btn md-hidden">
-          <i class="fa-solid fa-xmark" style="font-size: 20px;"></i>
-        </button>
+    <!--SIDENAV RIGHT-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      <div class="offcanvas-body">
+        <!--Profile-->
+        <div class="mb-3">
+          <a href="/profile" class="sidenav-link">
+            <img src="/static/image/user.png" class="sidenav-profile-img">
+            <span>View Your Profile</span>
+          </a>
+        </div>
 
-      <div class="p-2 mb-3 bg-body">
-        <a href="/profile" class="account-link">
-            <i class="fa-solid fa-circle-user"></i>
-            <span>Your Profile</span>
-        </a>
-        <a href="/posts" class="account-link">
+        <div class="mb-3">
+          <a href="/posts" class="sidenav-link">
             <i class="fa-solid fa-pen-to-square"></i>
             <span>Posts</span>
-        </a>
-        <a href="/following" class="account-link">
+          </a>
+          <a href="/posts" class="sidenav-link">
             <i class="fa-solid fa-users"></i>
             <span>Followings</span>
-        </a>
-      </div>
-      <div class="p-2 mb-3 bg-body">
-        <a href="/account" class="account-link">
+          </a>
+        </div>
+
+        <div class="mb-3">
+          <a href="/posts" class="sidenav-link">
             <i class="fa-solid fa-gear"></i>
             <span>Account</span>
-        </a>
-        <a href="/privacy" class="account-link">
+          </a>
+          <a href="/posts" class="sidenav-link">
             <i class="fa-solid fa-shield"></i>
             <span>Privacy</span>
-        </a>
-      </div>
-      <div class="p-2 mb-3 bg-body">
-        <a href="/help" class="account-link">
+          </a>
+        </div>
+        <div class="mb-3">
+          <a href="/posts" class="sidenav-link">
             <i class="fa-solid fa-book"></i>
             <span>Help & Support</span>
-        </a>
-        <a href="/about" class="account-link">
-            <i class="fa-solid fa-info-circle"></i>
+          </a>
+          <a href="/posts" class="sidenav-link">
+            <i class="fa-solid fa-circle-exclamation"></i>
             <span>About</span>
-        </a>
-      </div>
-      <div class="p-2 bg-body">
-        <a href="/logout" class="account-link">
+          </a>
+        </div>
+        <div class="mt-5">
+          <a href="/posts" class="sidenav-link">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span>Log Out</span>
-        </a>
+          </a>
+        </div>
       </div>
-    </aside>
+    </div>
 
     <!-- NAV TABS -->
     <nav class="bottom-nav bg-body" id="nav-tab" role="tablist">
@@ -117,10 +121,9 @@
           <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false">
             <i class="fa-solid fa-bookmark"></i><span>Saved</span>
           </button>
-          <button class="btn btn-account" type="button">
+          <button class="btn btn-account" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <img src="/static/image/user.png"><span>Account</span>
           </button>
     </nav>
-      
 </body>
 </html>

@@ -27,9 +27,27 @@ main {
     right: 0;
 }
 
-/* ===== ASIDE ===== */
-#aside {
-    display:none;
+/* ===== SIDENAV RIGHT ===== */
+.sidenav-link {
+    text-decoration:none;
+    color: var(--bs-text);
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bs-tertiary-bg);
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.sidenav-profile-img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid;
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 1.5px;
 }
 
 /* ===== BOTTOM NAV LINKS ===== */
