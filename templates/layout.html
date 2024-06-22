@@ -57,7 +57,7 @@
             <!--Saved folder tab-->
             <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
               <!--Adding list option-->
-              <div class="dropdown p-3 mb-3 d-flex" style="flex-direction: row-reverse;">
+              <div class="dropdown p-4 mb-3 d-flex" style="flex-direction: row-reverse;">
                 <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create List</button>
                 <div class="dropdown-menu p-3">
                     <form action="create-list" method="post">
@@ -75,6 +75,16 @@
                 </div>
               </div>
               <!--List will appear here-->
+              <div class="p-4">
+                <!--Deault list-->
+                <a href="/saved" class="saved-folder-link bg-body">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  <span class="saved-folder-info">
+                    <span>Saved for later</span>
+                    <small>Private</small>
+                  </span>
+                </a>
+              </div>
           </div>
     </main>
 
