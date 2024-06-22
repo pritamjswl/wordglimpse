@@ -47,9 +47,34 @@
     <!-- MAIN -->
     <main class="bg-body-tertiary">
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">Home</div>
-            <div class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">Recent</div>
-            <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">Saved</div>
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              {% block hometab %}{% endblock %}
+            </div>
+            <!--Recent posts will apper in this tab-->
+            <div class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
+              RECENT POSTS
+            </div>
+            <!--Saved folder tab-->
+            <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
+              <!--Adding list option-->
+              <div class="dropdown p-3 mb-3 d-flex" style="flex-direction: row-reverse;">
+                <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create List</button>
+                <div class="dropdown-menu p-3">
+                    <form action="create-list" method="post">
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="listname" placeholder="List Name" autofocus>
+                        </div>
+                        <div class="d-flex mb-3" style="justify-content: space-between;">
+                            <label for="publiclist">Make Public</label>
+                            <input type="checkbox" class="form-check-input" value="public" name="publiclist" id="publiclist">
+                        </div>
+                        <div class="d-flex" style="flex-direction: row-reverse;">
+                            <button type="submit" class="btn btn-primary">Add New</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+              <!--List will appear here-->
           </div>
     </main>
 
@@ -72,34 +97,34 @@
             <i class="fa-solid fa-pen-to-square"></i>
             <span>Posts</span>
           </a>
-          <a href="/posts" class="sidenav-link">
+          <a href="/followings" class="sidenav-link">
             <i class="fa-solid fa-users"></i>
             <span>Followings</span>
           </a>
         </div>
 
         <div class="mb-3">
-          <a href="/posts" class="sidenav-link">
+          <a href="/account" class="sidenav-link">
             <i class="fa-solid fa-gear"></i>
             <span>Account</span>
           </a>
-          <a href="/posts" class="sidenav-link">
+          <a href="/privacy" class="sidenav-link">
             <i class="fa-solid fa-shield"></i>
             <span>Privacy</span>
           </a>
         </div>
         <div class="mb-3">
-          <a href="/posts" class="sidenav-link">
+          <a href="/help" class="sidenav-link">
             <i class="fa-solid fa-book"></i>
             <span>Help & Support</span>
           </a>
-          <a href="/posts" class="sidenav-link">
+          <a href="/about" class="sidenav-link">
             <i class="fa-solid fa-circle-exclamation"></i>
             <span>About</span>
           </a>
         </div>
         <div class="mt-5">
-          <a href="/posts" class="sidenav-link">
+          <a href="/logout" class="sidenav-link">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span>Log Out</span>
           </a>
