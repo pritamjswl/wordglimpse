@@ -107,6 +107,34 @@
       </div>
     </div>
 
+    <!--UPLOAD offcanvas-->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+      <form action="/upload" method="post">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Create Post</h5>
+              <button type="submit" class="btn bg-primary post-btn">Post</button>
+          </div>
+          <div class="offcanvas-body">
+              <div class="mb-3">
+                  <label for="formFile" class="form-label">Upload An Image</label>
+                  <input class="form-control" type="file" id="formFile">
+              </div>
+
+              <div class="mb-3">
+                  <input class="form-control" type="text" placeholder="Title" name="title">
+              </div>
+
+              <div class="mb-3">
+                  <input class="form-control" type="text" placeholder="Category" name="category">
+              </div>
+
+              <div class="mb-3">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
+              </div>
+          </div>
+      </form>
+
+    </div>
     <!-- NAV TABS -->
     <nav class="bottom-nav bg-body" id="nav-tab" role="tablist">
           <button class="btn active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
@@ -115,7 +143,7 @@
           <button class="btn" id="nav-recent-tab" data-bs-toggle="tab" data-bs-target="#nav-recent" type="button" role="tab" aria-controls="nav-recent" aria-selected="false">
             <i class="fa-solid fa-clock"></i><span>Recent</span>
           </button>
-          <button class="btn btn-write" type="button">
+          <button class="btn btn-write" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             <i class=" fa-solid fa-pen-nib"></i><span class="sm-hidden">Create Post</span>
           </button>
           <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false">
