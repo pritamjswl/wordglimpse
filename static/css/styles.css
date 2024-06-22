@@ -27,6 +27,11 @@ main {
     right: 0;
 }
 
+/* ===== ASIDE ===== */
+#aside {
+    display:none;
+}
+
 /* ===== BOTTOM NAV LINKS ===== */
 .bottom-nav {
     z-index: 9;
@@ -46,13 +51,21 @@ main {
 }
 .bottom-nav > .btn span {font-size: 12px;}
 .bottom-nav > .btn.active > i {color: var(--bs-primary);}
-.btn-write {
+.btn-write, .btn-write:hover, .btn-write:active {
     border: 1px solid;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 15px;
+}
+.btn-account img {
+    border: 2px solid;
+    padding: 1.5px;
+    border-radius: 100%;
+    height: 22px;
+    width: 22px;
+    object-fit: cover;
 }
 /* ===== Small screen styling ===== */
 @media screen and (max-width:768px) {
@@ -98,7 +111,7 @@ main {
         margin-left: 15px;
         font-size: 16px;
     }
-    .btn-write {
+    .btn-write, .btn-write:hover, .btn-write:active {
         position: absolute;
         bottom: 0px;
         border:none;

@@ -50,60 +50,58 @@
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">Home</div>
             <div class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">Recent</div>
             <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">Saved</div>
-            <div class="tab-pane fade" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab" tabindex="0">
-
-              <!--SIDENAV-->
-              <aside class="p-2 bg-body" id="aside">
-                <div class="d-flex mb-3" style="flex-direction: row-reverse;">
-                  <button type="button" class="btn md-hidden">
-                    <i class="fa-solid fa-xmark" style="font-size: 20px;"></i>
-                  </button>
-                </div>
-
-                <div class="p-2 mb-3 bg-body">
-                  <a href="/profile" class="account-link">
-                      <i class="fa-solid fa-circle-user"></i>
-                      <span>Your Profile</span>
-                  </a>
-                  <a href="/posts" class="account-link">
-                      <i class="fa-solid fa-pen-to-square"></i>
-                      <span>Posts</span>
-                  </a>
-                  <a href="/following" class="account-link">
-                      <i class="fa-solid fa-users"></i>
-                      <span>Followings</span>
-                  </a>
-                </div>
-                <div class="p-2 mb-3 bg-body">
-                  <a href="/account" class="account-link">
-                      <i class="fa-solid fa-gear"></i>
-                      <span>Account</span>
-                  </a>
-                  <a href="/privacy" class="account-link">
-                      <i class="fa-solid fa-shield"></i>
-                      <span>Privacy</span>
-                  </a>
-                </div>
-                <div class="p-2 mb-3 bg-body">
-                  <a href="/help" class="account-link">
-                      <i class="fa-solid fa-book"></i>
-                      <span>Help & Support</span>
-                  </a>
-                  <a href="/about" class="account-link">
-                      <i class="fa-solid fa-info-circle"></i>
-                      <span>About</span>
-                  </a>
-                </div>
-                <div class="p-2 bg-body">
-                  <a href="/logout" class="account-link">
-                      <i class="fa-solid fa-right-from-bracket"></i>
-                      <span>Log Out</span>
-                  </a>
-                </div>
-              </aside>
-            </div>
           </div>
     </main>
+
+    <!--SIDENAV-->
+    <aside class="p-2 bg-body" id="aside">
+      <div class="d-flex mb-3" style="flex-direction: row-reverse;">
+        <button type="button" class="btn md-hidden">
+          <i class="fa-solid fa-xmark" style="font-size: 20px;"></i>
+        </button>
+      </div>
+
+      <div class="p-2 mb-3 bg-body">
+        <a href="/profile" class="account-link">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Your Profile</span>
+        </a>
+        <a href="/posts" class="account-link">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>Posts</span>
+        </a>
+        <a href="/following" class="account-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Followings</span>
+        </a>
+      </div>
+      <div class="p-2 mb-3 bg-body">
+        <a href="/account" class="account-link">
+            <i class="fa-solid fa-gear"></i>
+            <span>Account</span>
+        </a>
+        <a href="/privacy" class="account-link">
+            <i class="fa-solid fa-shield"></i>
+            <span>Privacy</span>
+        </a>
+      </div>
+      <div class="p-2 mb-3 bg-body">
+        <a href="/help" class="account-link">
+            <i class="fa-solid fa-book"></i>
+            <span>Help & Support</span>
+        </a>
+        <a href="/about" class="account-link">
+            <i class="fa-solid fa-info-circle"></i>
+            <span>About</span>
+        </a>
+      </div>
+      <div class="p-2 bg-body">
+        <a href="/logout" class="account-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+        </a>
+      </div>
+    </aside>
 
     <!-- NAV TABS -->
     <nav class="bottom-nav bg-body" id="nav-tab" role="tablist">
@@ -119,8 +117,8 @@
           <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false">
             <i class="fa-solid fa-bookmark"></i><span>Saved</span>
           </button>
-          <button class="btn" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="false">
-            <i class="fa-solid fa-circle-user"></i><span>Account</span>
+          <button class="btn btn-account" type="button">
+            <img src="/static/image/user.png"><span>Account</span>
           </button>
     </nav>
       
