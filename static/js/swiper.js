@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
       direction: 'vertical',
       mousewheelControl: true,
       slidesPerView: 1,
+      loop: true
   });
 
   var recentSwiper;
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
               direction: 'vertical',
               mousewheelControl: true,
               slidesPerView: 1,
+              loop: true
           });
       }
   });

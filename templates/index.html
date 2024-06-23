@@ -1,9 +1,53 @@
 {% extends "layout.html" %}
 
 {% block head %}
-    <title>Wordglimpse</title>
+    <title>Your Feed</title>
 {% endblock %}
 
 {% block hometab %}
-    HOME
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide card">
+            <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                    <div class="card-info">
+                        <span class="name">Pritam</span>
+                        <span class="date">19 June 2024</span>
+                    </div>
+                </div>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#readListModal"><i class="fa-regular fa-bookmark"></i></button>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <h3>Title of the blog post</h3>
+                    ....
+                </p>
+            </div>
+        </div>
+
+        <div class="swiper-slide card">
+            <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                    <div class="card-info">
+                        <span class="name">Fatima</span>
+                        <span class="date">19 June 2024</span>
+                    </div>
+                </div>
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#readListModal"><i class="fa-regular fa-bookmark"></i></button>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <h3>Title of the blog post</h3>
+                    ....
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
 {% endblock %}

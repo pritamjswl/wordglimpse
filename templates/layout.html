@@ -9,10 +9,10 @@
     <!--Font Awesome Icon-->
     <script src="https://kit.fontawesome.com/a4824506ea.js" crossorigin="anonymous"></script>
     <!--Swiper Js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/static/js/swiper.js"></script>
     <!--Custom statics-->
-    <link rel="icon" href="/static/image/favicon.ico">
+    <link rel="icon" href="/static/image/logo.png">
     <link rel="stylesheet" href="/static/css/styles.css">
     <script src="/static/js/main.js"></script>
     {% block head %}{% endblock %}
@@ -44,6 +44,7 @@
             </div>
         </div>
     </header>
+
     <!-- MAIN -->
     <main class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active bg-body-tertiary" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
@@ -80,7 +81,7 @@
                             <div class="card-header-left">
                                 <img src="/static/image/user.png" class="avatar-img" alt="Brand">
                                 <div class="card-info">
-                                    <span class="name">Pritam</span>
+                                    <span class="name">Fatima</span>
                                     <span class="date">19 June 2024</span>
                                 </div>
                             </div>
@@ -129,7 +130,6 @@
             </div>
         </div>
     </main>
-    
 
     <!--SIDENAV RIGHT-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -213,6 +213,30 @@
       </form>
 
     </div>
+
+    <!-- Add to list option -->
+    <div class="modal" id="readListModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add to a list</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="/add-to-playlist" method="post" id="playlistForm">
+                <div class="d-flex" style="justify-content: space-between;">
+                    <label for="readinglist">Reading List</label>
+                    <input class="form-check-input" type="checkbox" id="readinglist" name="readinglist" value="readinglist">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" form="playlistForm">Done</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <!-- NAV TABS -->
     <nav class="bottom-nav bg-body" id="nav-tab" role="tablist">
           <button class="btn active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
