@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/searchpage.css">
+    <title>Your Feed</title>
+{% endblock %}
+
+{% block hometab %}
+    <div class="p-2 mb-3">
+        <form action="/search" method="post">
+            <input type="text" name="q" value="dog">
+            <input type="text" name="tab" value="posts">
+            <button type="submit" class="btn">Posts</button>
+        </form>
+        <form action="/search" method="post">
+            <input type="text" name="q" value="dog">
+            <input type="text" name="tab" value="author">
+            <button type="submit" class="btn">Author</button>
+        </form>
+    </div>
+    
+{% endblock %}

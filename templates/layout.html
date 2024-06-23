@@ -45,13 +45,10 @@
         </div>
     </header>
 
-    <!-- MAIN -->
+    <!--MAIN TAB CONTENT-->
     <main class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active bg-body-tertiary" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-            {% block hometab %}{% endblock %}
-        </div>
-        <!--Recent posts will apper in this tab-->
-        <div class="tab-pane fade bg-body-tertiary" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
+        <!-- Home Tab -->
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
 
@@ -74,7 +71,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="swiper-slide card">
                         <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                         <div class="card-header">
@@ -98,163 +94,138 @@
                 </div>
             </div>
         </div>
-        <!--Saved folder tab-->
-        <div class="tab-pane fade bg-body-tertiary" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
-            <!--Adding list option-->
-            <div class="dropdown p-4 mb-3 d-flex" style="flex-direction: row-reverse;">
-            <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create List</button>
-            <div class="dropdown-menu p-3">
-                <form action="create-list" method="post">
-                    <div class="mb-3">
-                        <input class="form-control" type="text" name="listname" placeholder="List Name" autofocus>
-                    </div>
-                    <div class="d-flex mb-3" style="justify-content: space-between;">
-                        <label for="publiclist">Make Public</label>
-                        <input type="checkbox" class="form-check-input" value="public" name="publiclist" id="publiclist">
-                    </div>
-                    <div class="d-flex" style="flex-direction: row-reverse;">
-                        <button type="submit" class="btn btn-primary">Add New</button>
-                    </div>
-                </form>
-            </div>
-            </div>
-            <!--List will appear here-->
-            <div class="p-4">
-                <!--Deault list-->
-                <a href="/saved" class="saved-folder-link bg-body">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span class="saved-folder-info">
-                    <span>Saved for later</span>
-                    <small>Private</small>
-                </a>
-            </div>
+
+        <!-- Recent Tab -->
+        <div class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
+            
+        </div>
+
+        <!-- Saved Tab -->
+        <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
+
         </div>
     </main>
 
     <!--SIDENAV RIGHT-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <!--Profile-->
-        <div class="mb-3">
-          <a href="/profile" class="sidenav-link">
-            <img src="/static/image/user.png" class="sidenav-profile-img">
-            <span>View Your Profile</span>
-          </a>
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body">
+            <!--Profile-->
+            <div class="mb-3">
+                <a href="/profile" class="sidenav-link">
+                    <img src="/static/image/user.png" class="sidenav-profile-img">
+                    <span>View Your Profile</span>
+                </a>
+            </div>
+  
+            <div class="mb-3">
+                <a href="/posts" class="sidenav-link">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Posts</span>
+                </a>
+                <a href="/followings" class="sidenav-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Followings</span>
+                </a>
+            </div>
+  
+            <div class="mb-3">
+                <a href="/account" class="sidenav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Account</span>
+                </a>
+                <a href="/privacy" class="sidenav-link">
+                    <i class="fa-solid fa-shield"></i>
+                    <span>Privacy</span>
+                </a>
+            </div>
+            <div class="mb-3">
+                <a href="/help" class="sidenav-link">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Help & Support</span>
+                </a>
+                <a href="/about" class="sidenav-link">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>About</span>
+                </a>
+            </div>
 
-        <div class="mb-3">
-          <a href="/posts" class="sidenav-link">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <span>Posts</span>
-          </a>
-          <a href="/followings" class="sidenav-link">
-            <i class="fa-solid fa-users"></i>
-            <span>Followings</span>
-          </a>
+            <div class="mt-5">
+                <a href="/logout" class="sidenav-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
         </div>
-
-        <div class="mb-3">
-          <a href="/account" class="sidenav-link">
-            <i class="fa-solid fa-gear"></i>
-            <span>Account</span>
-          </a>
-          <a href="/privacy" class="sidenav-link">
-            <i class="fa-solid fa-shield"></i>
-            <span>Privacy</span>
-          </a>
-        </div>
-        <div class="mb-3">
-          <a href="/help" class="sidenav-link">
-            <i class="fa-solid fa-book"></i>
-            <span>Help & Support</span>
-          </a>
-          <a href="/about" class="sidenav-link">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <span>About</span>
-          </a>
-        </div>
-        <div class="mt-5">
-          <a href="/logout" class="sidenav-link">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Log Out</span>
-          </a>
-        </div>
-      </div>
     </div>
 
     <!--UPLOAD offcanvas-->
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-      <form action="/upload" method="post">
-          <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Create Post</h5>
-              <button type="submit" class="btn bg-primary post-btn">Post</button>
-          </div>
-          <div class="offcanvas-body">
-              <div class="mb-3">
-                  <label for="formFile" class="form-label">Upload An Image</label>
-                  <input class="form-control" type="file" id="formFile">
-              </div>
-
-              <div class="mb-3">
-                  <input class="form-control" type="text" placeholder="Title" name="title">
-              </div>
-
-              <div class="mb-3">
-                  <input class="form-control" type="text" placeholder="Category" name="category">
-              </div>
-
-              <div class="mb-3">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
-              </div>
-          </div>
-      </form>
-
+        <form action="/upload" method="post">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Create Post</h5>
+                <button type="submit" class="btn bg-primary post-btn">Post</button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload An Image</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Title" name="title">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Category" name="category">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!-- Add to list option -->
     <div class="modal" id="readListModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Add to a list</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form action="/add-to-playlist" method="post" id="playlistForm">
-                <div class="d-flex" style="justify-content: space-between;">
-                    <label for="readinglist">Reading List</label>
-                    <input class="form-check-input" type="checkbox" id="readinglist" name="readinglist" value="readinglist">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add to a list</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              </form>
+                <div class="modal-body">
+                    <form action="/add-to-playlist" method="post" id="playlistForm">
+                        <div class="d-flex" style="justify-content: space-between;">
+                            <label for="readinglist">Reading List</label>
+                            <input class="form-check-input" type="checkbox" id="readinglist" name="readinglist" value="readinglist">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" form="playlistForm">Done</button>
+                </div>
             </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" form="playlistForm">Done</button>
-            </div>
-          </div>
         </div>
     </div>
 
     <!-- NAV TABS -->
     <nav class="bottom-nav bg-body" id="nav-tab" role="tablist">
-          <button class="btn active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+        <button class="btn active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
             <i class="fa-solid fa-home"></i><span>Home</span>
-          </button>
-          <button class="btn" id="nav-recent-tab" data-bs-toggle="tab" data-bs-target="#nav-recent" type="button" role="tab" aria-controls="nav-recent" aria-selected="false">
+        </button>
+        <button class="btn" id="nav-recent-tab" data-bs-toggle="tab" data-bs-target="#nav-recent" type="button" role="tab" aria-controls="nav-recent" aria-selected="false">
             <i class="fa-solid fa-clock"></i><span>Recent</span>
-          </button>
-          <button class="btn btn-write" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+        </button>
+        <button class="btn btn-write" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             <i class=" fa-solid fa-pen-nib"></i><span class="sm-hidden">Create Post</span>
-          </button>
-          <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false">
+        </button>
+        <button class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" type="button" role="tab" aria-controls="nav-saved" aria-selected="false">
             <i class="fa-solid fa-bookmark"></i><span>Saved</span>
-          </button>
-          <button class="btn btn-account" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        </button>
+        <button class="btn btn-account" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <img src="/static/image/user.png"><span>Account</span>
-          </button>
+        </button>
     </nav>
-    
 </body>
 </html>
