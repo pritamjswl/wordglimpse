@@ -11,12 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.setAttribute('data-bs-theme', newTheme);
     localStorage.setItem('theme', newTheme);
   });
-  
-
 });
 
+// Toggle Search
 function toggleSearch() {
-    document.getElementById("searchBox").classList.toggle("sm-hidden");
-    // Focus search
-    document.getElementById("searchInput").focus();
+  document.getElementById("searchBox").classList.toggle("sm-hidden");
+  // Focus search
+  document.getElementById("searchInput").focus();
 }
