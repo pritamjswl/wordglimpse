@@ -5,7 +5,7 @@
 [data-bs-theme="dark"] {
     --bs-text: #fff;
 }
-/* hide scroll bar */
+/* Hide scroll bar to prevent flickering of swiper */
 ::-webkit-scrollbar {
     display: none;
 }
