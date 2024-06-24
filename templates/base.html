@@ -57,16 +57,18 @@
     <!--MAIN TAB CONTENT-->
     <main class="tab-content" id="nav-tabContent">
         <!-- Content Tab: For other pages like search, settings, profiles etc -->
-        <div class="tab-pane fade {% if contenttab %}show active{% endif %}" id="nav-content" role="tabpanel" aria-labelledby="nav-content-tab" tabindex="0">
+        <section class="tab-pane fade {% if contenttab %}show active{% endif %}" id="nav-content" role="tabpanel" aria-labelledby="nav-content-tab" tabindex="0">
             {% block content %}{% endblock %}
-        </div>
+        </section>
+
         <!-- Home Tab -->
-        <div class="tab-pane fade {% if not contenttab %}show active{% endif %}" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        <section class="tab-pane fade {% if not contenttab %}show active{% endif %}" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
                         <div class="card">
+                            <span class="badge text-bg-success">News</span>
                             <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                             <div class="card-header">
                                 <div class="card-header-left">
@@ -81,6 +83,7 @@
                             <div class="card-body">
                                 <p class="card-text">
                                     <h3>Title of the blog post</h3>
+                                    
                                     ....
                                 </p>
                             </div>
@@ -89,6 +92,7 @@
 
                     <div class="swiper-slide">
                         <div class="card">
+                            <span class="badge text-bg-success">Story</span>
                             <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                             <div class="card-header">
                                 <div class="card-header-left">
@@ -111,15 +115,16 @@
 
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Recent Tab -->
-        <div class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
+        <section class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
                         <div class="card">
+                            <span class="badge text-bg-success">Event</span>
                             <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                             <div class="card-header">
                                 <div class="card-header-left">
@@ -142,6 +147,7 @@
 
                     <div class="swiper-slide">
                         <div class="card">
+                            <span class="badge text-bg-success">Article</span>
                             <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                             <div class="card-header">
                                 <div class="card-header-left">
@@ -164,10 +170,10 @@
 
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Saved Tab -->
-        <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
+        <section class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
             <!--Adding list option-->
             <div class="dropdown p-4 mt-5 d-flex" style="flex-direction: row-reverse;">
                 <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create List</button>
@@ -196,7 +202,7 @@
                     <small>Private</small>
                 </a>
             </div>
-        </div>
+        </section>
     </main>
 
     <!--SIDENAV RIGHT-->
