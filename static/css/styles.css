@@ -38,15 +38,16 @@ html, body, .tab-content, .tab-pane, .swiper-container {
     width: 100%;
 }
 
-.swiper-wrapper {
-    position: relative;
-}
 /* ===== CARD ===== */
 .swiper-slide {
     width: 100%;
     height: 100%;
+    padding-top: 60px;
+    padding-bottom: 65px;
 }
 .card {
+    width: 100%;
+    height: 100%;
     border-radius: 0;
 }
 .card > img {
