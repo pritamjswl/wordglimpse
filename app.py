@@ -9,3 +9,10 @@ def index():
 @app.route("/search", methods=["GET"])
 def search():
     return render_template("search.html", contenttab=True)
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html", contenttab=True)
+
+if __name__ == "__main__":
+    app.run(debug=True)

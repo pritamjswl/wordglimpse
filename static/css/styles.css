@@ -100,6 +100,8 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
     padding: 10px;
     border: none;
     border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
 }
 .saved-folder-link i {
     font-size: 200%;
@@ -198,14 +200,15 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
 /* ===== Content Tab ===== */
 #nav-content {
     margin-top: 60px;
+    margin-bottom: 65px;
 }
-
 /* --------- Search Result Page -------- */
 .search-result .tab-pane {
     margin-bottom: 100px;
 }
 .search-result .card {
-    margin-bottom: 10px;
+    
+    height: 100%;
 }
 .search-author-card {
     list-style: none;
@@ -218,6 +221,7 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
     align-items: center;
     gap: 10px;
     width: 100%;
+    max-width: 600px;
     padding: 10px;
     color: var(--bs-text);
     margin-bottom: 5px;
@@ -230,6 +234,39 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
     border: 2px solid var(--bs-text);
     padding: 1px;
     border-radius: 100%;
+}
+.search-author-info {
+    display: flex;
+    flex-direction: column;
+}
+.search-author-info small {font-size:75%;}
+
+/* ------- Profile Page ------- */
+.profile-img-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.profile-img-container .cover-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.profile-img-container .user-img {
+    width: 80px;
+    height: 80px;
+    border: 7px solid var(--bs-secondary-bg);
+    border-radius: 100%;
+    padding: 1px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+    display: block;
+    position: relative;
+}
+
+.profile-img-container {
+    text-align: center;
 }
 
 /* ===== Small screen styling ===== */
