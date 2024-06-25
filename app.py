@@ -13,6 +13,3 @@ def search():
 @app.route("/profile")
 def profile():
     return render_template("profile.html", contenttab=True)
-
-if __name__ == "__main__":
-    app.run(debug=True)

@@ -10,11 +10,16 @@
     display: none;
 }
 * {
+    box-sizing: border-box;
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
 .btn {border:none;}
 .sm-hidden {display: none;}
+.row {
+    --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
 
 /* ===== HEADER ===== */
 .header {
@@ -33,11 +38,13 @@
 }
 
 /* ===== MAIN ===== */
-html, body, main.tab-content, .tab-pane, .swiper-container {
+html, body, main.tab-content, #nav-home, #nav-recent, .swiper-container {
     height: 100%;
     width: 100%;
 }
-
+#nav-content, #nav-saved {
+    padding: 60px 10px 65px 10px;
+}
 /* ===== CARD ===== */
 .swiper-slide {
     width: 100%;
@@ -45,19 +52,21 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
     padding-top: 60px;
     padding-bottom: 65px;
 }
-.swiper-slide > .card {
+.swiper-slide .card, .swiper-slide .card > img {
+    border-radius: 0;
+}
+
+.card {
     width: 100%;
     height: 100%;
-    border-radius: 0;
 }
 .card > span.badge {
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 5px;
 }
 .card > img {
     height: 150px;
-    border-radius: 0;
     object-fit: cover;
 }
 .card-header {
@@ -90,20 +99,27 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
 }
 
 
-/* ===== Saved Folder ===== */
-.saved-folder-link {
+/* ===== Saved OR Collection Folder ===== */
+.collection {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 10px;
-    text-decoration: none;
-    color: var(--bs-text);
     padding: 10px;
     border: none;
     border-radius: 5px;
     width: 100%;
     max-width: 600px;
+    margin-bottom: 10px;
 }
-.saved-folder-link i {
+.collection a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--bs-text);
+}
+.collection a i {
     font-size: 200%;
     display: inline-block;
     padding: 10px;
@@ -111,9 +127,12 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
     border:none;
     border-radius: 5px;
 }
-.saved-folder-info {
+.collection-info {
     display: flex;
     flex-direction: column;
+}
+.collection-info small {
+    font-size: 75%;
 }
 
 /* ===== SIDENAV RIGHT ===== */
@@ -197,19 +216,7 @@ html, body, main.tab-content, .tab-pane, .swiper-container {
     object-fit: cover;
 }
 
-/* ===== Content Tab ===== */
-#nav-content {
-    margin-top: 60px;
-    margin-bottom: 65px;
-}
 /* --------- Search Result Page -------- */
-.search-result .tab-pane {
-    margin-bottom: 100px;
-}
-.search-result .card {
-    
-    height: 100%;
-}
 .search-author-card {
     list-style: none;
     padding: 0;

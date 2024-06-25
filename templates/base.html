@@ -175,8 +175,8 @@
         <!-- Saved Tab -->
         <section class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
             <!--Adding list option-->
-            <div class="dropdown p-4 mt-5 d-flex" style="flex-direction: row-reverse;">
-                <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create List</button>
+            <div class="dropdown p-2 d-flex" style="flex-direction: row-reverse;">
+                <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i> Create Collection</button>
                 <div class="dropdown-menu p-3">
                     <form action="create-list" method="post">
                         <div class="mb-3">
@@ -193,16 +193,28 @@
                 </div>
             </div>
             <!--List will appear here-->
-            <div class="p-4">
-                <!--Deault list-->
-                <a href="/saved" class="saved-folder-link bg-body">
+            <!--Deault list-->
+            <div class="collection bg-body">
+                <a href="/saved">
                     <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span class="saved-folder-info">
+                    <span class="collection-info">
                         <span>Saved for later</span>
-                        <small>Private</small>
+                        <small>Private &#8226; 5 items</small>
                     </span>
                 </a>
             </div>
+
+            <div class="collection bg-body">
+                <a href="/saved">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="collection-info">
+                        <span>Reading Collection</span>
+                        <small>Public &#8226; 9 items</small>
+                    </span>
+                </a>
+                <button type="button" class="btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+
         </section>
     </main>
 
@@ -295,13 +307,13 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add to a list</h5>
+                    <h5 class="modal-title">Add to collections</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="/add-to-playlist" method="post" id="playlistForm">
                         <div class="d-flex" style="justify-content: space-between;">
-                            <label for="readinglist">Reading List</label>
+                            <label for="readinglist">Save for later</label>
                             <input class="form-check-input" type="checkbox" id="readinglist" name="readinglist" value="readinglist">
                         </div>
                     </form>
