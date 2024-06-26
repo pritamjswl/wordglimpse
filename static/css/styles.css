@@ -147,6 +147,15 @@ body {
         left: calc(25% + 5px);
         bottom: 5px;
     }
+    /* Swiper */
+    .swiper-container {
+        max-width: 500px;
+        display: block;
+        margin: auto;
+    }
+    .swiper-slide {
+        padding: 50px 0;
+    }
     /* Bottom Nav */
     .bottom-nav {
         top: 58px;

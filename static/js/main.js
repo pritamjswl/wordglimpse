@@ -24,4 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     uploadContent.addEventListener('input', () => {
         document.querySelector('#letterCount').innerHTML = uploadContent.value.length;
     });
+    // Enable swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        mousewheelControl: true,
+        slidesPerView: 1,
+        freeMode: true,
+        freeModeSticky: true,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+      });
 });
