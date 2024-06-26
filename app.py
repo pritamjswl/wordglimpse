@@ -12,5 +12,5 @@ def page_not_found(e):
 
 @app.route('/custom-404')
 def custom_404():
-    return "This is a custom 404 page. The page you are looking for does not exist.", 404
+    return "The page you are looking for does not exist.", 404
 
