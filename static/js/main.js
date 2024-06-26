@@ -19,4 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.setAttribute('data-bs-theme', newTheme);
         localStorage.setItem('theme', newTheme);
     });
+    // Count the letters in upload content
+    let uploadContent = document.querySelector('#uploadContent');
+    uploadContent.addEventListener('input', () => {
+        document.querySelector('#letterCount').innerHTML = uploadContent.value.length;
+    });
 });

@@ -63,6 +63,26 @@ body {
     padding: 1px;
 }
 
+/* ===== UPLOAD offconvas ===== */
+.offcanvas-bottom {
+    min-height: 70%;
+    width:100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: auto;
+    border:none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: all 0.3s;
+}
+.post-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    padding: 5px 20px;
+}
+
 /* === Small screen styling === */
 @media screen and (max-width:575px) {
     #searchBox {

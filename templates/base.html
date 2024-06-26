@@ -91,16 +91,49 @@
         </ul>
     </div>
 
+    <!--UPLOAD offcanvas-->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <form action="/upload" method="post">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Create Post</h5>
+                <button type="submit" class="btn bg-primary post-btn">Post</button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload An Image</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Title" name="title">
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="category">
+                        <option selected disabled>Select a category</option>
+                        <option value="news">News</option>
+                        <option value="story">Story</option>
+                        <option value="education">Education</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="uploadContent" rows="3" placeholder="Write here..." maxlength="500"></textarea>
+                </div>
+                <div class="mb-3 d-flex" style="justify-content: flex-end;">
+                    <p><span id="letterCount">0</span> / 500</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <!--TAB BUTTONS-->
     <nav class="bottom-nav bg-body">
        <div class="bottom-nav-btn-group">
             <button type="button" class="btn active"><i class="fa-solid fa-home"></i><span>Home</span></button>
             <button type="button" class="btn"><i class="fa-solid fa-clock"></i><span>Recent</span></button>
-            <button type="button" class="btn bottom-upload-btn d-md-none"><i class="fa-solid fa-pen-nib"></i></button>
+            <button type="button" class="btn bottom-upload-btn d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-pen-nib"></i></button>
             <button type="button" class="btn"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
             <button type="button" class="btn"><img src="/static/image/user.png"><span>Account</span></button>
        </div>
-       <button type="button" class="btn btn-primary d-none d-md-flex md-upload-btn"><i class="fa-solid fa-pen-nib"></i>Start Writing</button>
+       <button type="button" class="btn btn-primary d-none d-md-flex md-upload-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-pen-nib"></i>Start Writing</button>
     </nav>
 </body>
 </html>
