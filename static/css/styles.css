@@ -63,6 +63,30 @@ body {
     padding: 1px;
 }
 
+/* ===== SIDENAV RIGHT ===== */
+.offcanvas-end {transition: all 0.3s;}
+.sidenav-link {
+    text-decoration:none;
+    color: var(--bs-text);
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bs-body-bg);
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.sidenav-profile-img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid;
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 1.5px;
+}
+
 /* ===== UPLOAD offconvas ===== */
 .offcanvas-bottom {
     min-height: 70%;

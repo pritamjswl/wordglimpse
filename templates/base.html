@@ -91,6 +91,62 @@
         </ul>
     </div>
 
+    <!--SIDENAV RIGHT-->
+    <div class="offcanvas offcanvas-end bg-body-tertiary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!--Profile-->
+            <div class="mb-3">
+                <a href="/profile" class="sidenav-link">
+                    <img src="/static/image/user.png" class="sidenav-profile-img">
+                    <span>View Your Profile</span>
+                </a>
+            </div>
+            <div class="mb-3">
+                <a href="/settings" class="sidenav-link">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="/posts" class="sidenav-link">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Posts</span>
+                </a>
+                <a href="/followings" class="sidenav-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Followings</span>
+                </a>
+            </div>
+            <div class="mb-3">
+                <a href="/account" class="sidenav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Account</span>
+                </a>
+                <a href="/privacy" class="sidenav-link">
+                    <i class="fa-solid fa-shield"></i>
+                    <span>Privacy</span>
+                </a>
+            </div>
+            <div class="mb-3">
+                <a href="/help" class="sidenav-link">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Help & Support</span>
+                </a>
+                <a href="/about" class="sidenav-link">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>About</span>
+                </a>
+            </div>
+            <div class="mt-5">
+                <a href="/logout" class="sidenav-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!--UPLOAD offcanvas-->
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
         <form action="/upload" method="post">
@@ -131,7 +187,7 @@
             <button type="button" class="btn"><i class="fa-solid fa-clock"></i><span>Recent</span></button>
             <button type="button" class="btn bottom-upload-btn d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-pen-nib"></i></button>
             <button type="button" class="btn"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
-            <button type="button" class="btn"><img src="/static/image/user.png"><span>Account</span></button>
+            <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="/static/image/user.png"><span>Account</span></button>
        </div>
        <button type="button" class="btn btn-primary d-none d-md-flex md-upload-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-pen-nib"></i>Start Writing</button>
     </nav>
