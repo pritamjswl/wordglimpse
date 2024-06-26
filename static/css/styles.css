@@ -20,6 +20,19 @@ body {
     margin-bottom: 65px;
     height: 100%;
 }
+/* TAB CONTENT */
+.tab-content, .tab-pane {
+    width: 100%;
+    height: 100%;
+}
+/* Swiper */
+.swiper-container, .swiper-wraper, .swiper-slide, .swiper-slide > .card {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide > .card .card-img-top {
+    height: 150px;
+}
 
 /* === BOTTOM NAV === */
 .bottom-nav {

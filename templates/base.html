@@ -53,43 +53,113 @@
             </div>
         </div>
     </header>
-    <div>
-        <ul>
-            <li>======= START OF LIST =======</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>1234567890</li>
-            <li>abcdefghij</li>
-            <li>======= END OF LIST =======</li>
-        </ul>
-    </div>
+    
+    <!--MAIN TAB CONTENT-->
+    <main class="tab-content" id="nav-tabContent">
+        <!-- Content Tab: For other pages like search, settings, profiles etc -->
+        <section class="tab-pane fade {% if contenttab %}show active{% endif %}" id="nav-content" role="tabpanel" aria-labelledby="nav-content-tab" tabindex="0">
+            {% block content %}{% endblock %}
+        </section>
+
+        <!-- Home Tab -->
+        <section class="tab-pane fade {% if not contenttab %}show active{% endif %}" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                            <div class="card-header">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolore cumque nihil adipisci ipsa repellendus velit, delectus ipsum, tempora, voluptas laborum. Unde provident id, totam beatae architecto blanditiis earum ullam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                            <div class="card-header">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolore cumque nihil adipisci ipsa repellendus velit, delectus ipsum, tempora, voluptas laborum. Unde provident id, totam beatae architecto blanditiis earum ullam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Tab -->
+        <section class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
+            <ul>
+                <li>=====Start=====</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>Middle</li>
+                <li>=====END=====</li>
+            </ul>
+        </section>
+
+        <!-- Saved Tab -->
+        <section class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab" tabindex="0">
+            <!--Adding list option-->
+            <div class="dropdown p-2 d-flex" style="flex-direction: row-reverse;">
+                <button type="button" class="btn btn-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-folder-plus"></i> Create Collection</button>
+                <div class="dropdown-menu p-3">
+                    <form action="create-collection" method="post">
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="collection" placeholder="Collection Name" autofocus>
+                        </div>
+                        <div class="d-flex mb-3" style="justify-content: space-between;">
+                            <label for="publicCollection">Make Public</label>
+                            <input type="checkbox" class="form-check-input" value="public" name="publicCollection" id="publicCollection">
+                        </div>
+                        <div class="d-flex" style="flex-direction: row-reverse;">
+                            <button type="submit" class="btn btn-primary">Add New</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--List will appear here-->
+        </section>
+    </main>
 
     <!--SIDENAV RIGHT-->
     <div class="offcanvas offcanvas-end bg-body-tertiary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -182,11 +252,12 @@
 
     <!--TAB BUTTONS-->
     <nav class="bottom-nav bg-body">
-       <div class="bottom-nav-btn-group">
-            <button type="button" class="btn active"><i class="fa-solid fa-home"></i><span>Home</span></button>
-            <button type="button" class="btn"><i class="fa-solid fa-clock"></i><span>Recent</span></button>
+       <div class="bottom-nav-btn-group" id="nav-tab" role="tablist">
+            <button type="button" class="btn d-none {% if contenttab %}active{% endif %}" id="nav-content-tab" data-bs-toggle="tab" data-bs-target="#nav-content" role="tab" aria-controls="nav-content" aria-selected="{% if contenttab %}true{% else %}false{% endif %}"></button>
+            <button type="button" class="btn {% if not contenttab %}active{% endif %}" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-home"></i><span>Home</span></button>
+            <button type="button" class="btn" id="nav-recent-tab" data-bs-toggle="tab" data-bs-target="#nav-recent" role="tab" aria-controls="nav-recent" aria-selected="false"><i class="fa-solid fa-clock"></i><span>Recent</span></button>
             <button type="button" class="btn bottom-upload-btn d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-pen-nib"></i></button>
-            <button type="button" class="btn"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
+            <button type="button" class="btn" id="nav-saved-tab" data-bs-toggle="tab" data-bs-target="#nav-saved" role="tab" aria-controls="nav-saved" aria-selected="false"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
             <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="/static/image/user.png"><span>Account</span></button>
        </div>
        <button type="button" class="btn btn-primary d-none d-md-flex md-upload-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-pen-nib"></i>Start Writing</button>
