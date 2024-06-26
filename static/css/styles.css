@@ -1,6 +1,15 @@
 /* === FIXING === */
+:root, [data-bs-theme="light"] {
+    --bs-text: #000;
+}
+[data-bs-theme="dark"] {
+    --bs-text: #fff;
+}
 ::-webkit-scrollbar {
     display: none;
+}
+.btn {
+    border:none;
 }
 * {
     -ms-overflow-style: none; 
@@ -14,7 +23,44 @@ body {
 
 /* === BOTTOM NAV === */
 .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    z-index: 99;
+}
+.bottom-nav-btn-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.bottom-nav-btn-group > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+.bottom-nav-btn-group > button.active i {
+    color: var(--bs-primary);
+}
+.bottom-upload-btn {
+    border: 1px solid var(--bs-text);
+    border-radius: 100%!important;
+    padding: 10px;
+}
+.bottom-nav-btn-group > button span {
+    font-size: 65%;
+}
+.bottom-nav-btn-group > button img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    border: 1px solid var(--bs-text);
+    border-radius: 100%;
+    padding: 1px;
 }
 
 /* === Small screen styling === */
@@ -30,4 +76,54 @@ body {
         z-index: 100;
     }
     #searchBox > form {padding: 9px;}
+}
+
+/* === MEDIUM DEVICES === */
+@media screen and (min-width:768px) {
+    /* BODY */
+    body {
+        margin-left:25%;
+        width: 75%;
+    }
+    /* Bottom Nav */
+    .bottom-nav {
+        top: 60px;
+        width: 25%;
+    }
+    .bottom-nav-btn-group {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .bottom-nav-btn-group > button {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 3px;
+        gap: 10px;
+        padding: 12px;
+    }
+    .bottom-nav-btn-group > button:hover {
+       background-color: var(--bs-secondary-bg);
+    }
+    .bottom-nav-btn-group > button i {
+        font-size: 120%;
+    }
+    .bottom-nav-btn-group > button span {
+        padding-left: 5px;
+        font-size: 100%;
+    }
+    .md-upload-btn {
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .md-upload-btn > i {
+        padding-right: 10px;
+    }
 }

@@ -92,14 +92,15 @@
     </div>
 
     <!--TAB BUTTONS-->
-    <nav class="bottom-nav fixed-bottom bg-body">
+    <nav class="bottom-nav bg-body">
        <div class="bottom-nav-btn-group">
-            <button type="button" class="btn"><i class="fa-solid fa-home"></i><span>Home</span></button>
+            <button type="button" class="btn active"><i class="fa-solid fa-home"></i><span>Home</span></button>
             <button type="button" class="btn"><i class="fa-solid fa-clock"></i><span>Recent</span></button>
-            <button type="button" class="btn"><i class="fa-solid fa-pen-nib"></i><span class="d-none d-md-inline">Start Writing</span></button>
+            <button type="button" class="btn bottom-upload-btn d-md-none"><i class="fa-solid fa-pen-nib"></i></button>
             <button type="button" class="btn"><i class="fa-solid fa-bookmark"></i><span>Saved</span></button>
-            <button type="button" class="btn"><i class="fa-solid fa-folder"></i><span>Account</span></button>
+            <button type="button" class="btn"><img src="/static/image/user.png"><span>Account</span></button>
        </div>
+       <button type="button" class="btn btn-primary d-none d-md-flex md-upload-btn"><i class="fa-solid fa-pen-nib"></i>Start Writing</button>
     </nav>
 </body>
 </html>
