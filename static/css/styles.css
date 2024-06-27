@@ -39,6 +39,59 @@ body {
     height: 150px;
 }
 
+/* Card */
+.card {
+    overflow: scroll;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+.card-header-left {
+    display: flex;
+    align-items: center;
+}
+.card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.card-report-btn {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+.card-report-btn i {
+    border:0.5px solid #000;
+    border-radius: 100%;
+    color: #fff;
+    background-color: #000;
+}
+.card-info {
+    display: inline-flex;
+    flex-direction: column;
+}
+.card-info .date {
+    font-size: 70%;
+}
+.card-header .avatar-img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.card-title {
+    white-space: nowrap;
+    overflow: auto;
+}
+.card-text {
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-all;
+}
+
 /* === BOTTOM NAV === */
 .bottom-nav {
     position: fixed;

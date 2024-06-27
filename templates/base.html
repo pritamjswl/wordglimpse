@@ -69,21 +69,44 @@
                         <div class="card">
                             <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                             <div class="card-header">
-                                Header
+                                <span class="badge text-bg-primary">Education</span>
+                                <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                                <div class="card-header-left">
+                                    <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                    <div class="card-info">
+                                        <span class="name">Pritam</span>
+                                        <span class="date text-body-secondary">19 June 2024</span>
+                                    </div>
+                                </div>
+                                <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolore cumque nihil adipisci ipsa repellendus velit, delectus ipsum, tempora, voluptas laborum. Unde provident id, totam beatae architecto blanditiis earum ullam.</p>
+                                <h5 class="card-title">Lorem ipsum title of the post</h5>
+                                <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                                </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="swiper-slide">
                         <div class="card">
                             <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
                             <div class="card-header">
-                                Header
+                                <span class="badge text-bg-primary">Education</span>
+                                <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                                <div class="card-header-left">
+                                    <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                    <div class="card-info">
+                                        <span class="name">Pritam</span>
+                                        <span class="date text-body-secondary">19 June 2024</span>
+                                    </div>
+                                </div>
+                                <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolore cumque nihil adipisci ipsa repellendus velit, delectus ipsum, tempora, voluptas laborum. Unde provident id, totam beatae architecto blanditiis earum ullam.</p>
+                                <h5 class="card-title">Lorem ipsum title of the post</h5>
+                                <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -190,7 +213,7 @@
                     <input class="form-control" type="file" id="formFile">
                 </div>
                 <div class="mb-3">
-                    <input class="form-control" type="text" placeholder="Title" name="title">
+                    <input class="form-control" type="text" placeholder="Title" name="title" maxlength="100">
                 </div>
                 <div class="mb-3">
                     <select class="form-select" aria-label="category">
@@ -201,13 +224,68 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" id="uploadContent" rows="3" placeholder="Write here..." maxlength="500"></textarea>
+                    <textarea class="form-control" id="uploadContent" rows="4" placeholder="Write here..." maxlength="300"></textarea>
                 </div>
                 <div class="mb-3 d-flex" style="justify-content: flex-end;">
-                    <p><span id="letterCount">0</span> / 500</p>
+                    <p><span id="letterCount">0</span> / 300</p>
                 </div>
             </div>
         </form>
+    </div>
+
+    <!--Report for Post-->
+    <div class="modal" id="reportPostModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Report this post!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/report-post" method="post" id="playlistForm">
+                        <p>Post will be sent for varification and will be removed if found irrelevant.</p>
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="category">
+                                <option selected disabled>Select a reason</option>
+                                <option value="abusive">Abusive</option>
+                                <option value="misinformation">Misinformation</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="comment" placeholder="Any comment..." maxlength="300"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                    <button type="submit" class="btn btn-danger" form="playlistForm">Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add to collection-->
+    <div class="modal" id="collectionModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add to collections</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/add-to-collection" method="post" id="playlistForm">
+                        <div class="d-flex" style="justify-content: space-between;">
+                            <label for="readinglist">Save for later</label>
+                            <input class="form-check-input" type="checkbox" id="readinglist" name="readinglist" value="readinglist">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" form="playlistForm">Done</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--TAB BUTTONS-->

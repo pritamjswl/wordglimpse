@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -8,9 +8,4 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return redirect(url_for('custom_404'))
-
-@app.route('/custom-404')
-def custom_404():
     return "The page you are looking for does not exist.", 404
-
