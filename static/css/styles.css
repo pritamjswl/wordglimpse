@@ -72,7 +72,11 @@ main.tab-content, main.tab-content > .tab-pane {
     display: inline-flex;
     flex-direction: column;
 }
-.card-info .date {
+.card-info .card-name {
+    text-decoration: none;
+    color: var(--bs-text);
+}
+.card-info .card-date {
     font-size: 70%;
 }
 .card-header .avatar-img {
@@ -93,8 +97,13 @@ main.tab-content, main.tab-content > .tab-pane {
     word-break: break-all;
 }
 /* Nav Tab links for recet tab */
-#nav-recent .nav-link {
-    padding: 4px 20px;
+#nav-recent .nav-link, .profile-tab-btns > button{
+    padding: 2px 10px;
+    font-size: 80%;
+    border-radius: 30px;
+}
+.profile-tab-btns > button.active {
+    background-color: var(--bs-primary);
 }
 #nav-recent .nav-link > i {
     padding-right: 10px;
@@ -302,6 +311,7 @@ main.tab-content, main.tab-content > .tab-pane {
     border-radius: 100%;
     position: relative;
 }
+
 /* === Small screen styling === */
 @media screen and (max-width:575px) {
     #searchBox {

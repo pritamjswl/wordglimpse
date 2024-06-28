@@ -16,23 +16,87 @@
         <button type="button" class="btn btn-primary" style="width:45%;max-width:250px;">Follow</button>
     </div>
     <!--Intro-->
-    <div class="p-3 m-5 mb-2 bg-body-tertiary" style="border-radius: 5px;">
+    <div class="p-3 m-2 mb-2 bg-body-tertiary" style="border-radius: 5px;">
         <h5>Intro</h5>
         <p>I am a web developer passionate in writing short blogs.</p>
     </div>
 
-    <ul class="nav nav-tabs p-5" id="porfileTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="porfileRecent-tab" data-bs-toggle="tab" data-bs-target="#profileRecent-tab-pane" type="button" role="tab" aria-controls="profileRecent-tab-pane" aria-selected="true">Recent</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profileCollection-tab" data-bs-toggle="tab" data-bs-target="#profileCollection-tab-pane" type="button" role="tab" aria-controls="profileCollection-tab-pane" aria-selected="false">Collection</button>
-        </li>
-    </ul>
+    <div class="p-3 profile-tab-btns" role="tablist">
+        <button class="btn active" id="porfileRecent-tab" data-bs-toggle="tab" data-bs-target="#profileRecent-tab-pane" type="button" role="tab" aria-controls="profileRecent-tab-pane" aria-selected="true">Recent</button>
+        <button class="btn" id="profileCollection-tab" data-bs-toggle="tab" data-bs-target="#profileCollection-tab-pane" type="button" role="tab" aria-controls="profileCollection-tab-pane" aria-selected="false">Collection</button>
+    </div>
 
-    <div class="tab-content p-5" id="myTabContent">
-        <div class="tab-pane fade show active" id="profileRecent-tab-pane" role="tabpanel" aria-labelledby="profileRecent-tab" tabindex="0">...</div>
-        <div class="tab-pane fade" id="profileCollection-tab-pane" role="tabpanel" aria-labelledby="profileCollection-tab" tabindex="0">...</div>
+    <div class="tab-content p-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="profileRecent-tab-pane" role="tabpanel" aria-labelledby="profileRecent-tab" tabindex="0">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                        <div class="card-header">
+                            <span class="badge text-bg-primary">Education</span>
+                            <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                            <div class="card-header-left">
+                                <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                <div class="card-info">
+                                    <a href="/profile" class="card-name">Pritam</a>
+                                    <span class="card-date text-body-secondary">19 June 2024</span>
+                                </div>
+                            </div>
+                            <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum title of the post</h5>
+                            <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                        <div class="card-header">
+                            <span class="badge text-bg-primary">Education</span>
+                            <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                            <div class="card-header-left">
+                                <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                <div class="card-info">
+                                    <a href="/profile" class="card-name">Pritam</a>
+                                    <span class="card-date text-body-secondary">19 June 2024</span>
+                                </div>
+                            </div>
+                            <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum title of the post</h5>
+                            <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profileCollection-tab-pane" role="tabpanel" aria-labelledby="profileCollection-tab" tabindex="0">
+            <div class="collection">
+                <div class="collection-folder">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="collection-info">
+                        <a href="/saved" class="collection-title">My Fav</a>
+                        <span class="collection-item">Public &#x2022; 10 items</span>
+                    </span>
+                </div>
+                <button class="btn" type="button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="collection">
+                <div class="collection-folder">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="collection-info">
+                        <a href="/saved" class="collection-title">Traveling edge</a>
+                        <span class="collection-item">Public &#x2022; 15 items</span>
+                    </span>
+                </div>
+                <button class="btn" type="button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
     </div>
     
 {% endblock %}
