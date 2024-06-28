@@ -117,7 +117,114 @@
 
         <!-- Recent Tab -->
         <section class="tab-pane fade" id="nav-recent" role="tabpanel" aria-labelledby="nav-recent-tab" tabindex="0">
-            ...
+            <ul class="nav nav-pills mb-3 p-2" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-global-tab" data-bs-toggle="pill" data-bs-target="#pills-global" type="button" role="tab" aria-controls="pills-global" aria-selected="true"><i class="fa-solid fa-globe"></i>Global</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-feed-tab" data-bs-toggle="pill" data-bs-target="#pills-feed" type="button" role="tab" aria-controls="pills-feed" aria-selected="false"><i class="fa-solid fa-users"></i>Feed</button>
+                </li>
+            </ul>
+            <div class="tab-content p-2" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-global" role="tabpanel" aria-labelledby="pills-global-tab" tabindex="0">
+
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                                <div class="card-header">
+                                    <span class="badge text-bg-primary">Education</span>
+                                    <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                                    <div class="card-header-left">
+                                        <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                        <div class="card-info">
+                                            <span class="name">Pritam</span>
+                                            <span class="date text-body-secondary">19 June 2024</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem ipsum title of the post</h5>
+                                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                                <div class="card-header">
+                                    <span class="badge text-bg-primary">Education</span>
+                                    <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                                    <div class="card-header-left">
+                                        <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                        <div class="card-info">
+                                            <span class="name">Pritam</span>
+                                            <span class="date text-body-secondary">19 June 2024</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem ipsum title of the post</h5>
+                                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab" tabindex="0">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                                <div class="card-header">
+                                    <span class="badge text-bg-primary">Education</span>
+                                    <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                                    <div class="card-header-left">
+                                        <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                        <div class="card-info">
+                                            <span class="name">Pritam</span>
+                                            <span class="date text-body-secondary">19 June 2024</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem ipsum title of the post</h5>
+                                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                                <div class="card-header">
+                                    <span class="badge text-bg-primary">Education</span>
+                                    <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                                    <div class="card-header-left">
+                                        <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                        <div class="card-info">
+                                            <span class="name">Pritam</span>
+                                            <span class="date text-body-secondary">19 June 2024</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem ipsum title of the post</h5>
+                                    <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Saved Tab -->
@@ -141,6 +248,7 @@
                 </div>
             </div>
             <!--List will appear here-->
+            
         </section>
     </main>
 
@@ -243,7 +351,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="/report-post" method="post" id="playlistForm">
-                        <p>Post will be sent for varification and will be removed if found irrelevant.</p>
+                        <p>Post will be sent for review and will be removed if found irrelevant.</p>
                         <div class="mb-3">
                             <select class="form-select" aria-label="category">
                                 <option selected disabled>Select a reason</option>

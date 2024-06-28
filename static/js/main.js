@@ -29,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         direction: 'vertical',
         mousewheelControl: true,
         slidesPerView: 1,
-        freeMode: true,
-        freeModeSticky: true,
+        
         keyboard: {
             enabled: true,
             onlyInViewport: false,

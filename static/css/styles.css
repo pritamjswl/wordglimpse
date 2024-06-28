@@ -11,6 +11,10 @@
 .btn {
     border:none;
 }
+.row {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+}
 * {
     -ms-overflow-style: none; 
     scrollbar-width: none;  
@@ -24,7 +28,7 @@ body {
     overflow: scroll;
 }
 /* TAB CONTENT */
-.tab-content, .tab-pane {
+main.tab-content, main.tab-content > .tab-pane {
     width: 100%;
     height: 100%;
     overflow: scroll;
@@ -35,13 +39,10 @@ body {
     width: 100%;
     height: 100%;
 }
-.swiper-slide > .card .card-img-top {
-    height: 150px;
-}
 
 /* Card */
-.card {
-    overflow: scroll;
+.card .card-img-top {
+    height: 150px;
 }
 .card-header {
     display: flex;
@@ -91,7 +92,13 @@ body {
     text-justify: inter-word;
     word-break: break-all;
 }
-
+/* Nav Tab links for recet tab */
+#nav-recent .nav-link {
+    padding: 4px 20px;
+}
+#nav-recent .nav-link > i {
+    padding-right: 10px;
+}
 /* === BOTTOM NAV === */
 .bottom-nav {
     position: fixed;
