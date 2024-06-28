@@ -111,6 +111,7 @@ main.tab-content, main.tab-content > .tab-pane {
     border:none;
     border-radius: 5px;
     padding: 10px;
+    margin-bottom: 7px;
 }
 .collection-folder {
     display: flex;
