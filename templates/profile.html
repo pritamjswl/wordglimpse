@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+    <div class="text-center mb-2">
+        <img class="cover-photo" src="/static/image/preview.jpg" alt="Cover Photo">
+        <img class="avatar-photo" src="/static/image/user.png" alt="User">
+        <p>Pritam</p>
+    </div>
+
+    <div class="p-2 mb-2 d-flex justify-content-around">
+        <button type="button" class="btn" style="width:45%;max-width: 250px;border:2px solid var(--bs-primary);">Posts</button>
+        <button type="button" class="btn btn-primary" style="width:45%;max-width:250px;">Follow</button>
+    </div>
+    <!--Intro-->
+    <div class="p-3 m-5 mb-2 bg-body-tertiary" style="border-radius: 5px;">
+        <h5>Intro</h5>
+        <p>I am a web developer passionate in writing short blogs.</p>
+    </div>
+
+    <ul class="nav nav-tabs p-5" id="porfileTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="porfileRecent-tab" data-bs-toggle="tab" data-bs-target="#profileRecent-tab-pane" type="button" role="tab" aria-controls="profileRecent-tab-pane" aria-selected="true">Recent</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profileCollection-tab" data-bs-toggle="tab" data-bs-target="#profileCollection-tab-pane" type="button" role="tab" aria-controls="profileCollection-tab-pane" aria-selected="false">Collection</button>
+        </li>
+    </ul>
+
+    <div class="tab-content p-5" id="myTabContent">
+        <div class="tab-pane fade show active" id="profileRecent-tab-pane" role="tabpanel" aria-labelledby="profileRecent-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="profileCollection-tab-pane" role="tabpanel" aria-labelledby="profileCollection-tab" tabindex="0">...</div>
+    </div>
+    
+{% endblock %}

@@ -11,6 +11,10 @@ def search():
     term = request.args.get("q")
     return render_template("search.html", term=term, contenttab=True)
 
+@app.route("/profile")
+def profile():
+    return render_template("profile.html", contenttab=True)
+
 @app.errorhandler(404)
 def page_not_found(e):
     return "The page you are looking for does not exist.", 404
