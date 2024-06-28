@@ -225,6 +225,65 @@ main.tab-content, main.tab-content > .tab-pane {
     padding: 5px 20px;
 }
 
+/* ----- Search Result Page ----- */
+.search-result-form {
+    display:inline-flex;
+    border:none;
+    background-color: var(--bs-tertiary-bg);
+    border-radius: 5px;
+    overflow:hidden;
+    width: 100%;
+    max-width: 500px;
+    justify-content:space-between;
+    align-items: center;
+}
+.search-result-form input[type='search'] {
+    border:none;
+    outline:none;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
+    width: calc(100% - 20px);
+}
+.search-tab-btns button {
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+}
+.search-tab-btns button.active {
+    border-bottom-color: var(--bs-text);
+}
+/* Author card */
+.author-card {
+    text-decoration:none;
+    color: var(--bs-text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--bs-secondary-bg);
+    border:none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 7px;
+}
+.author-card > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1.2px solid var(--bs-text);
+    padding: 1px;
+    border-radius: 100%;
+}
+.author-card-inner {
+    display: flex;
+    flex-direction: column;
+}
+.author-card-info {
+    font-size: 80%;
+    color: var(--bs-text-body-secondary);
+}
 /* === Small screen styling === */
 @media screen and (max-width:575px) {
     #searchBox {

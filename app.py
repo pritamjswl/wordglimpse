@@ -1,10 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/search")
+def search():
+    term = request.args.get("q")
+    return render_template("search.html", term=term, contenttab=True)
 
 @app.errorhandler(404)
 def page_not_found(e):

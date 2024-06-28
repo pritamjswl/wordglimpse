@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid text-center" style="padding-top: 10px;">
+        <form action="/search" method="get" class="search-result-form">
+            <input type="search" name="q" value="{{ term }}">
+            <button type="submit" class="btn"><i class="fa-solid fa-search"></i></button>
+        </form>
+    </div>
+
+    <div class="btn-group p-2 search-tab-btns" role="tablist">
+        <button type="button" class="btn active" title="posts" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-tab-pane" role="tab" aria-controls="posts-tab-pane" aria-selected="true">Posts</button>
+        <button type="button" class="btn" title="collections" id="collections-tab" data-bs-toggle="tab" data-bs-target="#collections-tab-pane" role="tab" aria-controls="collections-tab-pane" aria-selected="false">Collections</button>
+        <button type="button" class="btn" title="authors" id="authors-tab" data-bs-toggle="tab" data-bs-target="#authors-tab-pane" role="tab" aria-controls="authors-tab-pane" aria-selected="true">Authors</button>
+    </div>
+
+    <div class="tab-content" id="searchResultTabs">
+        <!--Posts-->
+        <div class="tab-pane fade show active p-2" id="posts-tab-pane" role="tabpanel" aria-labelledby="posts-tab" tabindex="0">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                        <div class="card-header">
+                            <span class="badge text-bg-primary">Education</span>
+                            <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                            <div class="card-header-left">
+                                <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                <div class="card-info">
+                                    <span class="name">Pritam</span>
+                                    <span class="date text-body-secondary">19 June 2024</span>
+                                </div>
+                            </div>
+                            <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum title of the post</h5>
+                            <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <img src="/static/image/preview.jpg" class="card-img-top" alt="...">
+                        <div class="card-header">
+                            <span class="badge text-bg-primary">Education</span>
+                            <button type="button" class="btn card-report-btn" title="report" data-bs-toggle="modal" data-bs-target="#reportPostModal"><i class="fa-solid fa-circle-exclamation"></i></button>
+                            <div class="card-header-left">
+                                <img src="/static/image/user.png" class="avatar-img" alt="Brand">
+                                <div class="card-info">
+                                    <span class="name">Pritam</span>
+                                    <span class="date text-body-secondary">19 June 2024</span>
+                                </div>
+                            </div>
+                            <button class="btn" title="save" data-bs-toggle="modal" data-bs-target="#collectionModal"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum title of the post</h5>
+                            <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.
+                            </p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <!--Collections-->
+        <div class="tab-pane fade p-2" id="collections-tab-pane" role="tabpanel" aria-labelledby="collections-tab" tabindex="0">
+            <div class="collection">
+                <div class="collection-folder">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="collection-info">
+                        <a href="/saved" class="collection-title">Life hacks</a>
+                        <a class="collection-author" href="/profile">Pratik</a>
+                        <span class="collection-item">Public &#x2022; 11 items</span>
+                    </span>
+                </div>
+                <button class="btn" type="button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div class="collection">
+                <div class="collection-folder">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="collection-info">
+                        <a href="/saved" class="collection-title">News</a>
+                        <a class="collection-author" href="/profile">Rajeev</a>
+                        <span class="collection-item">Public &#x2022; 10 items</span>
+                    </span>
+                </div>
+                <button class="btn" type="button"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div class="collection">
+                <div class="collection-folder">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="collection-info">
+                        <a href="/saved" class="collection-title">Travel along river</a>
+                        <a class="collection-author" href="/profile">Pritam</a>
+                        <span class="collection-item">Public &#x2022; 6 items</span>
+                    </span>
+                </div>
+                <button class="btn" type="button"><i class="fa-solid fa-plus"></i></button>
+            </div>  
+        </div>
+        <!--Authors-->
+        <div class="tab-pane fade p-2" id="authors-tab-pane" role="tabpanel" aria-labelledby="authors-tab" tabindex="0">
+            <a href="/profile" class="author-card">
+                <img src="/static/image/user.png" alt="User">
+                <div class="author-card-inner">
+                    <span class="author-card-name" title="Profile">Rajeev</span>
+                    <span class="author-card-info">20 Followers &#x2022; 30 Posts</span>
+                </div>
+            </a>
+            <a href="/profile" class="author-card">
+                <img src="/static/image/user.png" alt="User">
+                <div class="author-card-inner">
+                    <span class="author-card-name" title="Profile">Sujal</span>
+                    <span class="author-card-info">25 Followers &#x2022; 23 Posts</span>
+                </div>
+            </a>
+            <a href="/profile" class="author-card">
+                <img src="/static/image/user.png" alt="User">
+                <div class="author-card-inner">
+                    <span class="author-card-name" title="Profile">Pratik</span>
+                    <span class="author-card-info">53 Followers &#x2022; 10 Posts</span>
+                </div>
+            </a>  
+        </div>
+    </div>
+
+{% endblock %}
