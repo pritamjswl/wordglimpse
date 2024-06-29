@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block content %}
+
+    <div class="p-2">
+        <div class="mb-3 text-center">
+            <h3>Account</h3>
+        </div>
+
+        <div class="mb-3 text-center">
+            <p><strong class="text-primary">Email:</strong> <span class="text-muted">username@example.com</span> <small class="text-danger">(Can't update email)</small></p>
+        </div>
+
+        <form action="/update-password" method="post" class="d-block m-auto" style="width: 100%; max-width: 500px;">
+            <div class="mb-3 mt-5 text-center">
+                <h4>Change your password</h4>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Old Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your old password">
+            </div>
+            <div class="mb-3">
+                <label for="newPassword" class="form-label">New Pasword</label>
+                <input type="password" class="form-control" id="newPassword" placeholder="New password">
+            </div>
+            <div class="mb-3">
+                <label for="passwordAgain" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="passwordAgain" placeholder="Type password again">
+            </div>
+            <button class="btn btn-primary d-block m-auto" type="submit" style="width:100%; max-width:200px;">Update</button>
+        </form>
+    </div>
+
+    <div class="p-2 mt-5">
+        <h5 class="text-center text-danger">Delete your account</h5>
+
+        <form action="/account/delete" method="post" class="d-block m-auto" style="width: 100%; max-width: 500px;">
+            <div class="mt-3 mb-3">
+                <label for="password" class="form-label">Your Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-danger d-block m-auto" type="submit" style="width:100%; max-width:200px;">Delete Account</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

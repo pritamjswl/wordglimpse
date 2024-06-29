@@ -21,7 +21,15 @@ def edit_profile():
 
 @app.route("/posts/manage")
 def manage_posts():
-    return render_template("/manage-posts.html", contenttab=True)
+    return render_template("manage-posts.html", contenttab=True)
+
+@app.route("/followings")
+def followings():
+    return render_template("followings.html", contenttab=True)
+
+@app.route("/account")
+def account():
+    return render_template("account.html", contenttab=True)
 
 @app.errorhandler(404)
 def page_not_found(e):

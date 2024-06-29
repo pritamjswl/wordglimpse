@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Followings
+{% endblock %}
+
+{% block content %}
+
+    <div class="p-2 mb-3 text-center">
+        <h3>Authors you follow</h3>
+    </div>
+
+    <div class="p-2">
+        <a href="/profile" class="author-card">
+            <img src="/static/image/user.png" alt="User">
+            <div class="author-card-inner">
+                <span class="author-card-name" title="Profile">Rajeev</span>
+                <span class="author-card-info">20 Followers &#x2022; 30 Posts</span>
+            </div>
+        </a>
+
+        <a href="/profile" class="author-card">
+            <img src="/static/image/user.png" alt="User">
+            <div class="author-card-inner">
+                <span class="author-card-name" title="Profile">Pratik</span>
+                <span class="author-card-info">28 Followers &#x2022; 11 Posts</span>
+            </div>
+        </a>
+    </div>
+{% endblock %}
