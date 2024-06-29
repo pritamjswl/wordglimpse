@@ -15,6 +15,10 @@ def search():
 def profile():
     return render_template("profile.html", contenttab=True)
 
+@app.route("/profile/edit")
+def edit_profile():
+    return render_template("edit-profile.html", contenttab=True)
+
 @app.errorhandler(404)
 def page_not_found(e):
     return "The page you are looking for does not exist.", 404

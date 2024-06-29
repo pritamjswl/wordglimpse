@@ -104,6 +104,7 @@ main.tab-content, main.tab-content > .tab-pane {
 }
 .profile-tab-btns > button.active {
     background-color: var(--bs-primary);
+    color: #fff;
 }
 #nav-recent .nav-link > i {
     padding-right: 10px;
