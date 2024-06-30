@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block body %}
+
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+    </li>
+  </ul> -->
+  
+    <div class="tab-content bg-body" id="authTabContent">
+        <!-- Fill email id -->
+        <div class="tab-pane p-5 fade show active" id="email-tab-pane" role="tabpanel" aria-labelledby="email-tab" tabindex="0">
+            <div class="mb-3">
+                <img src="/static/image/logo.png" class="d-block m-auto" style="height:50px;">
+            </div>
+            <form action="/signup" method="post" class="d-block m-auto" style="width: 100%; max-width: 500px;">
+                <div class="mb-5">
+                    <h3 class="text-center">Create an account</h3>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary d-block m-auto" type="submit" style="width:100%; max-width:200px;">Verify</button>
+                </div>
+            </form>
+            <p class="text-center">Already have an account <a href="/login" class="text-primary">login</a></p>
+        </div>
+        <!-- Verify OTP -->
+        <div class="tab-pane fade" id="verify-tab-pane" role="tabpanel" aria-labelledby="varify-tab" tabindex="0">
+
+        </div>
+        <!-- Complete registration -->
+        <div class="tab-pane fade" id="register-tab-pane" role="tabpanel" aria-labelledby="register-tab" tabindex="0">
+
+        </div>
+    </div>
+
+{% endblock %}

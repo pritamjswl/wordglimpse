@@ -5,15 +5,15 @@
 [data-bs-theme="dark"] {
     --bs-text: #fff;
 }
-::-webkit-scrollbar {
-    display: none;
-}
 .btn {
     border:none;
 }
 .row {
     --bs-gutter-x: 1rem;
     --bs-gutter-y: 1rem;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 * {
     -ms-overflow-style: none; 
@@ -312,6 +312,7 @@ main.tab-content, main.tab-content > .tab-pane {
     border-radius: 100%;
     position: relative;
 }
+/* Login | Signup page */
 
 /* === Small screen styling === */
 @media screen and (max-width:575px) {
