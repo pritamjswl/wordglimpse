@@ -8,11 +8,11 @@ def index():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+    return render_template("login.html", auth=True)
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
-    return render_template("signup.html")
+    return render_template("signup.html", auth=True)
 
 @app.route("/search")
 def search():
@@ -42,3 +42,4 @@ def account():
 @app.errorhandler(404)
 def page_not_found(e):
     return "The page you are looking for does not exist.", 404
+

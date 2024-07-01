@@ -5,29 +5,26 @@
 {% endblock %}
 
 {% block body %}
-<div class="p-5 bg-body">
-    <div class="mb-3">
-        <img src="/static/image/logo.png" class="d-block m-auto" style="height:50px;">
-    </div>
-    <form action="/login" method="post" class="d-block m-auto" style="width: 100%; max-width: 500px;">
-        <div class="mb-5">
-            <h3 class="text-center"><span class="text-primary">Word</span><span class="text-danger">glimpse</span></h3>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating mb-5">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-        </div>
+    <div class="p-5 bg-body">
         <div class="mb-3">
-            <button class="btn btn-primary d-block m-auto" type="submit" style="width:100%; max-width:200px;">Login</button>
+            <img src="/static/image/logo.png" class="d-block m-auto" style="height:50px;">
         </div>
-    </form>
-    <p class="text-center">Don't have an account <a href="/signup" class="text-primary">signup</a></p>
-</div>
-
-
-
+        <form action="/login" method="post" class="d-block m-auto" style="width: 100%; max-width: 500px;">
+            <div class="mb-5">
+                <h3 class="text-center"><span class="text-primary">Word</span><span class="text-danger">glimpse</span></h3>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-5">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary d-block m-auto" type="submit" style="width:100%; max-width:200px;">Login</button>
+            </div>
+        </form>
+        <p class="text-center">Don't have an account <a href="/signup" class="text-primary">signup</a></p>
+    </div>
 {% endblock %}

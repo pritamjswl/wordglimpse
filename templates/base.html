@@ -25,7 +25,7 @@
         <script src="/static/js/main.js"></script>
         <title>{% block title %}{% endblock %}</title>
     </head>
-<body class="bg-body-tertiary" data-bs-theme="light">
+<body class="{% if not auth %} bg-body-tertiary  body-md-right {% endif %}" data-bs-theme="light">
     {% block body %}{% endblock %}
 </body>
 </html>

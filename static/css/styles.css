@@ -19,7 +19,7 @@
     -ms-overflow-style: none; 
     scrollbar-width: none;  
 }
-body {
+.body-md-right {
     position: fixed;
     top: 58px;
     bottom: 50px;
@@ -332,7 +332,7 @@ main.tab-content, main.tab-content > .tab-pane {
 /* === MEDIUM DEVICES === */
 @media screen and (min-width:768px) {
     /* BODY */
-    body {
+    .body-md-right {
         left: calc(25% + 5px);
         bottom: 5px;
     }
