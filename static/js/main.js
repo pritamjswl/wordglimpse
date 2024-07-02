@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Count the letters in upload content
     let uploadContent = document.querySelector('#uploadContent');
-    uploadContent.addEventListener('input', () => {
-        document.querySelector('#letterCount').innerHTML = uploadContent.value.length;
-    });
+    if (uploadContent) {
+        uploadContent.addEventListener('input', () => {
+            document.querySelector('#letterCount').innerHTML = uploadContent.value.length;
+        });
+    }
     // Enable swiper
     var swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
